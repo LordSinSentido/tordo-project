@@ -1,0 +1,101 @@
+[
+    {
+        "id": 0,
+    	"titulo": "Rehabilitación de drenajes en la Universidad Anáhuac Norte en Huixquilucan",
+        "pie": "Suministro e instalación de 320.00 m de tubería PAD.",
+        "img": "img/proyectos/0-01.jpg",
+        "img2": "img/proyectos/0-02.jpg",
+        "img3": "img/proyectos/0-03.jpg",
+       	"descripcion": "Rehabilitación de drenajes sanitario y pluvial en la Universidad Anáhuac Norte en Huixquilucan, Estado de México.",
+       	"alcance": "Suministro e instalación de 320.00 m de tubería pad de 12” de diámetro, y 540.00 m de tubería pad de 15” de diámetro, a una profundidad de 1.50 m, construcción de pozos de visita y pozos de absorción de tabique, demolición y reposición de concreto hidráulico.",
+        "fecha": "Del 31 de mayo al 31 de julio de 2010."
+    },
+    {
+        "id": 1,
+        "titulo": "Obra en carretera Amecameca – San Pedro Nexapa",
+        "pie": "Cruce de demostración del sistema de perforación guiada (GBM).",
+        "img": "img/proyectos/1-01.jpg",
+        "img2": "img/proyectos/1-02.jpg",
+        "img3": "img/proyectos/1-03.jpg",
+        "descripcion": "Cruce de demostración del Sistema de Perforación Guiada (GBM) con equipo marca Akkerman, utilizando tubería de barro vitrificado de 15” de diámetro, instalación para cruzar la carretera Amecameca – San Pedro Nexapa, Estado de México. En unión con la empresa Alinea Group, S.A. de C.V. trabajos para la CAEM del Estado de México.",
+        "alcance": "Suministro e instalación de 20.00 m de tubería de barro vitrificado de 15” de diámetro a una profundidad de 2.70 m por el método de sistema guiado con tubo piloto; la construcción de 2 lumbreras circulares de 3.20 m de diámetro de madera reforzada con arillos metálicos.",
+        "fecha": "Del 26 de noviembre al 08 de diciembre de 2012."
+    },
+    {
+        "id": 2,
+        "titulo": "Subcolector San Marcos",
+        "pie": "Suministro e instalación de 873.00 m de tubería de concreto reforzado.",
+        "img": "img/proyectos/2-01.jpg",
+        "img2": "img/proyectos/2-02.jpg",
+        "img3": "img/proyectos/2-03.jpg",
+        "descripcion": "Construcción del Subcolector San Marcos, Plazas Aragón, cabecera municipal de Nezahualcóyotl, Estado de México. En unión con la empresa Alinea Group, S.A. de C.V. trabajos para la CAEM del Estado de México.",
+        "alcance": "Suministro e instalación de 873.00 m de tubería de concreto reforzado por el método de sistema guiado con tubo piloto; la construcción de 9 lumbreras de empuje y salida de 4.0 x 5.0 m y 7.00 m de profundidad, construcción de 8 pozos caja de 2.00 x 2.50 x 6.25 m de profundidad y 9 sondeos de mecánica de suelos.",
+        "fecha": "Del 01 de abril al 30 de noviembre de 2013."
+    },
+    {
+        "id": 3,
+        "titulo": "Subcolectores al Colector Emiliano Zapata",
+        "pie": "Suministro e instalación de 1,350.00 m de tubería de concreto reforzado.",
+        "img": "img/proyectos/3-01.jpg",
+        "img2": "img/proyectos/3-02.jpg",
+        "img3": "img/proyectos/3-03.jpg",
+        "descripcion": "Construcción de subcolectores al Colector Emiliano Zapata (primera etapa), cabecera municipal de Ecatepec, Estado de México. En unión con la empresa Alinea Group, S.A. de C.V. trabajos para la CAEM del Estado de México.",
+        "alcance": "Suministro e instalación de 1,350.00 m de tubería de concreto reforzado por el método de sistema guiado con tubo piloto; la construcción de trece lumbreras de empuje y salida de 4.0 x 5.0 m y 7.00 m de profundidad, construcción de 13 pozos caja de 2.00 x 2.50 x 6.25 m de profundidad y 14 sondeos de mecánica de suelos.",
+        "fecha": "Del 01 de diciembre de 2013 al 23 de mayo de 2014."
+    },
+    {
+        "id": 4,
+        "titulo": "Subcolector Amecameca",
+        "pie": "Construcción del subcolector Amecameca, en Amecameca.",
+        "img": "img/proyectos/4-01.jpg",
+        "img2": "img/proyectos/4-02.jpg",
+        "img3": "img/proyectos/4-03.jpg",
+        "descripcion": "Construcción del Subcolector Amecameca, en Amecameca, Estado de México.",
+        "alcance": "Instalación por el método de perforación guiada de 135.0 m de tubería de concreto de 91 cm de diámetro, construcción de tres lumbreras de 4.0 x 5.0 m y 5.80 m de profundidad y tres cajas de concreto reforzado.",
+        "fecha": "Del 01 de septiembre al 30 de octubre de 2014."
+    },
+    {
+        "id": 5,
+        "titulo": "Instalación de tubería para el Colector Fontibón",
+        "pie": "Instalación de tubería de concreto por el sistema de perforación guiada.",
+        "img": "img/proyectos/5-01.jpg",
+        "img2": "img/proyectos/5-02.jpg",
+        "img3": "img/proyectos/5-03.jpg",
+        "descripcion": "Asesoría técnica para la instalación de tubería de concreto por el sistema de perforación guiada, en la construcción del Colector Fontibón en Bogotá, Colombia.",
+        "alcance": "Instalación de 197.36 m de tubería de concreto de 400 mm de diámetro, 427.23 m de tubería de concreto de 600 mm de diámetro y 359.19 m de tubería de concreto de 900 mm de diámetro.",
+        "fecha": "Del 15 de mayo de 2015 al 15 de febrero de 2016."
+    },
+    {
+        "id": 6,
+        "titulo": "Colector en Calle Miguel Hidalgo",
+        "pie": "Construcción del colector con tubería de 1.22 m de diámetro",
+        "img": "img/proyectos/6-01.jpg",
+        "img2": "img/proyectos/6-02.jpg",
+        "img3": "img/proyectos/6-03.jpg",
+        "descripcion": "Construcción del colector con tubería de 1.22 m de diámetro en la Calle Miguel Hidalgo en la Colonia Tepalcates en el Municipio de Chimalhuacán, Estado de México.",
+        "alcance": "Instalación por el método de hincado de tubería de 336 m de tubería de concreto de 1.22 m de diámetro, construcción de dos lumbreras de empuje de 10.00 x 5.00 y 6.00 m de profundidad y dos lumbreras especiales de salida de 7.00 x 6.00 y 6.00 m de profundidad.",
+        "fecha": "Del 04 de mayo al 27 de julio de 2017."
+    },
+    {
+        "id": 7,
+        "titulo": "Colector Calle Asistencia Pública",
+        "pie": "Construcción del colector con tubería de concreto reforzado de 1.52 m de diámetro.",
+        "img": "img/proyectos/7-01.jpg",
+        "img2": "img/proyectos/7-02.jpg",
+        "img3": "img/proyectos/7-03.jpg",
+        "descripcion": "Construcción del colector con tubería de concreto reforzado de 1.52 m de diámetro interior, hasta una profundidad promedio de 9.00 m aproximadamente, mediante el procedimiento de hincado de tubería con el sistema de microtuneleo, en la Calle Asistencia Pública, en la delegación Venustiano Carranza. Ciudad de México.",
+        "alcance": "Instalación por el método de hincado de tubería de 535 m de tubería de concreto reforzado de 1.52 m de diámetro interior.",
+        "fecha": "Del 04 de septiembre al 15 de noviembre de 2017."
+    },
+    {
+        "id": 8,
+        "titulo": "Encamisado con tubería de concreto en Av. Texcoco",
+        "pie": "Instalación de tubería de concreto de 1.22 m de diámetro para encamisado.",
+        "img": "img/proyectos/8-01.jpg",
+        "img2": "img/proyectos/8-02.png",
+        "img3": "img/proyectos/8-03.png",
+        "descripcion": "Encamisado con tubería de concreto de 1.22 m de diámetro en Av. Texcoco esquina Av. Carmelo Pérez en el municipio de Nezahualcóyotl, Estado de México.",
+        "alcance": "Hincado de 103.20 m de tubería de concreto reforzado de 1.22 m de diámetro interior, deslizamiento de tubería de acero de 42” Y 3/8” de espesor dentro.",
+        "fecha": "Del 20 de octubre del 2018 al 08 de marzo del 2019"
+    }
+]

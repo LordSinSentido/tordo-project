@@ -1,0 +1,6 @@
+[
+{"nombre":"John Deere 250","tipo":"Retroexcavadora","descripcion":"En buen estado, le falta la tapadera del deposito del agua","img":"../img/fondo.webp","situacion":"Disponible"},
+{"nombre":"Caterpillar 250 M","tipo":"Motoconformadora","descripcion":"En buen estado, tiene dos llantas de tractor y la cuchilla est\u00e1 un poco desafilada","img":"../img/fondo.webp","situacion":"No disponible"},
+{"nombre":"Caterpillar D6K2","tipo":"Bulldozer","descripcion":"Excelente estado, tiene detalles en la est\u00e9tica, pero solamente eso.","img":"../img/fondo.webp","situacion":"No disponible"},
+{"nombre":"Caterpillar CB 534D","tipo":"Vibrocompactador","descripcion":"Excelente estado, una de las llantas est\u00e1 desgastada.","img":"../img/fondo.webp","situacion":"Disponible"}
+]
