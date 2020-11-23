@@ -1,0 +1,122 @@
+nav{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 0.5em;
+    margin: 1em 0em;
+    align-self: center;
+}
+
+h1{
+    font-weight: bold;
+    color: var(--color_oscuro);
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.logotipo{
+    padding: 1em;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.logotipo > div{
+    text-align: center;
+}
+
+.botones{
+    display: block;
+    padding: 0.75em 1.5em;
+    margin: 0.25em 0em;
+    text-align: center;
+    font-weight: bold;
+    text-decoration: none;
+    border: 0.25em solid var(--color_oscuro);
+    border-radius: 0.25em;
+    color: var(--color_oscuro);
+    transition: 0.3s;
+}
+
+.botones:hover{
+    background: var(--color_enfasis);
+    border: 0.25em solid var(--color_enfasis);
+    color: white;
+    transition: 0.3s;
+}
+
+.botonBloqueado{
+    border: 0.25em solid var(--color_realce);
+    color: var(--color_realce);
+    cursor: not-allowed;
+}
+
+.botonBloqueado:hover{
+    background: white;
+    border: 0.25em solid var(--color_realce);
+    color: var(--color_realce);
+    box-shadow: none;
+}
+
+#username{
+    display: block;
+    padding: 0.75em 0em;
+    margin: 0.25em 0em;
+    text-align: center;
+    font-weight: bold;
+    text-decoration: none;
+    border: 0.25em solid rgba(255, 255, 255, 0);
+    border-radius: 0.25em;
+    color: var(--color_oscuro);
+}
+
+#navegacion{
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+#logo{
+    width: 5em;
+    margin-right: 0.5em;
+    
+}
+
+@media screen and (min-width: 720px) {
+    nav{
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .botones{
+        padding: .75em 2.5em;
+    }
+    
+    .logotipo{
+        display: flex;
+        flex-flow: row;
+    }
+
+    .logotipo > div{
+        text-align: left;
+    }
+}
+
+@media screen and (min-width: 1020px) {
+    
+}
+
+@media screen and (min-width: 1250px) {
+    nav{
+        padding-right: 1em;
+    }
+
+    #navegacion{
+        display: flex;
+        flex-flow: row;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+}
