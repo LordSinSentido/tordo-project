@@ -1,0 +1,213 @@
+section{
+    padding: 1em 10vw;
+}
+
+input{
+    font-family: 'Didact Gothic', sans-serif;
+    font-size: 1em;
+    width: 50%;
+    padding: 0.75em 1.5em;
+    border: 0.25em solid var(--color_oscuro);
+    border-radius: 0.25em;
+    outline: none;
+    background: none;
+    transition: 0.2s;
+}
+
+input:hover{
+    border: 0.25em solid var(--color_enfasis);
+    transition: 0.2s;
+}
+
+input:focus{
+    border: 0.25em solid var(--color_enfasis);
+    transition: 0.2s;
+}
+
+textarea{
+    font-family: 'Didact Gothic', sans-serif;
+    font-size: 1em;
+    width: 75%;
+    padding: 0.75em 1.5em;
+    border: 0.25em solid var(--color_oscuro);
+    border-radius: 0.25em;
+    outline: none;
+    resize: none;
+    background: none;
+    transition: 0.2s;
+}
+
+textarea:hover{
+    border: 0.25em solid var(--color_enfasis);
+    transition: 0.2s;
+}
+
+textarea:focus{
+    border: 0.25em solid var(--color_enfasis);
+    transition: 0.2s;
+}
+
+select{
+    font-family: 'Didact Gothic', sans-serif;
+    font-size: 1em;
+    width: fit-content;
+    padding: 0.75em 1.5em;
+    border: 0.25em solid var(--color_oscuro);
+    border-radius: 0.25em;
+    outline: none;
+    cursor: pointer;
+    background: none;
+    transition: 0.2s;
+}
+
+select:hover{
+    border: 0.25em solid var(--color_enfasis);
+    transition: 0.2s;
+}
+
+select:focus{
+    border: 0.25em solid var(--color_enfasis);
+    transition: 0.2s;
+}
+
+button{
+    font-family: 'Didact Gothic', sans-serif;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.ocultar{
+    display: none;
+    visibility: collapse;
+}
+
+.boton{
+    display: block;
+    background: none;
+    padding: 0.75em 1.5em;
+    margin: 0.25em 0em;
+    text-align: center;
+    font-weight: bold;
+    text-decoration: none;
+    border: 0.25em solid var(--color_oscuro);
+    border-radius: 0.25em;
+    color: var(--color_oscuro);
+    transition: 0.3s;
+}
+
+.boton:hover{
+    background: var(--color_enfasis);
+    border: 0.25em solid var(--color_enfasis);
+    color: white;
+    transition: 0.3s;
+}
+
+.botonBloqueado{
+    border: 0.25em solid var(--color_realce);
+    color: var(--color_realce);
+    cursor: not-allowed;
+}
+
+.botonBloqueado:hover{
+    background: #eee;
+    border: 0.25em solid var(--color_realce);
+    color: var(--color_realce);
+    box-shadow: none;
+}
+
+.botonDerecha{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin-top: 1em;
+}
+
+.grid{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-gap: 1.5em;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border: 0.25em solid var(--color_oscuro);
+    border-radius: 0.25em;
+    transition: 0.2s;
+}
+
+.card:hover{
+    border: 0.25em solid var(--color_realce);
+    transition: 0.2s;
+}
+
+.cardImg > img{
+    width: 100%;
+}
+
+.cardTitulo {
+    font-size: 1.2em;
+}
+
+.cardCuerpo {
+    padding: 0em 1.5em;
+    margin-top: 1em;
+}
+
+.cardPie {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 0em 1.5em;
+    margin: 1em 0em;
+}
+
+#botonera{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1em;
+    width: fit-content;
+}
+
+#botonFormulario{
+    display: grid;
+    margin-left: auto;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+    width: fit-content;
+}
+
+@media screen and (min-width: 720px) {
+    section{
+        padding: 1em 10vw;
+    }
+    
+    .boton{
+        padding: .75em 2.5em;
+    }
+
+    .grid{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (min-width: 1020px) {
+    section{
+        padding: 2em 15vw;
+    }
+
+    .grid{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media screen and (min-width: 1250px) {
+
+}
