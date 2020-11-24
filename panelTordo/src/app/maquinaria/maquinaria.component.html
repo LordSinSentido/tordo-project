@@ -1,16 +1,12 @@
 <section id="acciones">
-    <h2>Acciones que puedes realizar</h2>
-    <div id="botonera">
-        <a class="boton" id="agregar">Agregar</a>
-        <a class="boton botonBloqueado" id="editar">Editar</a>
-        <a class="boton botonBloqueado" id="eliminar">Eliminar</a>
+    <div id="cabecera">
+        <a id="botonInicio" href="/">&#10094;</a>
+        <h2>Panel de maquinarías</h2>
     </div>
-</section>
 
-<section class="" id="seccionAgregar">
-    <h2>Agregar nueva maquinaria</h2>
+    <button class="boton" (click)="intercambiar()">Crear una entrada</button>
 
-    <form action="php/agregarMaquinaria.php" method="post" autocomplete="off">
+    <form id="agregar" class="ocultar" action="./../../assets/maquinaria/agregarMaquinaria.php" method="post" autocomplete="off">
         <div>
             <label for="nombre">Tipo de maquinaría</label>
             <br>
@@ -41,22 +37,8 @@
         </div>
         <div id="botonFormulario">
             <button type="reset" class="boton">Limpiar</button>
-            <button type="submit" class="boton">Agregar</button>
+            <button type="submit" class="boton">Guardar</button>
         </div>
     </form>
 
-</section>
-
-<section class="" id="seccionEditar">
-    <h2>Editar una maquina</h2>
-</section>
-<section class="" id="seccionEliminar">
-    <h2>Eliminar una maquina</h2>
-</section>
-
-<section id="maquinariaGuardada">
-    <h2>Maquinaria guardada</h2>
-    <div class="grid" id="importacion">
-        
-    </div>
 </section>

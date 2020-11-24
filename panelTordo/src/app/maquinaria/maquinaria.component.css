@@ -1,3 +1,7 @@
+h2{
+    font-size: 2em;
+}
+
 section{
     padding: 1em 10vw;
 }
@@ -169,11 +173,31 @@ button{
     margin: 1em 0em;
 }
 
-#botonera{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 1em;
-    width: fit-content;
+#cabecera{
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5em;
+}
+
+#botonInicio{
+    display: block;
+    background: none;
+    padding: 0.5em 1em;
+    margin-right: 1em;
+    text-align: center;
+    font-weight: bold;
+    text-decoration: none;
+    border: 0.25em solid var(--color_oscuro);
+    border-radius: 0.25em;
+    color: var(--color_oscuro);
+    transition: 0.3s;
+}
+
+#botonInicio:hover{
+    background: var(--color_enfasis);
+    border: 0.25em solid var(--color_enfasis);
+    color: white;
+    transition: 0.3s;
 }
 
 #botonFormulario{

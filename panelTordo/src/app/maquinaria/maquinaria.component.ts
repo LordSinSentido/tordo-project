@@ -7,6 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MaquinariaComponent implements OnInit {
 
+  intercambiar() {
+    let formulario: any = document.querySelector('#agregar');
+    formulario.classList.toggle('ocultar');
+  }
+
   constructor() { }
 
   ngOnInit(): void {
