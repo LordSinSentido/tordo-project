@@ -12,3 +12,8 @@
     padding: 0px;
     font-family: 'Didact Gothic', sans-serif;
 }
+
+a{
+    cursor: pointer;
+    text-decoration: none;
+}

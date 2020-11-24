@@ -4,41 +4,48 @@
         <h2>Panel de maquinarías</h2>
     </div>
 
-    <button class="boton" (click)="intercambiar()">Crear una entrada</button>
+    <div class="contenedores">
+        <h3>Acciones rápidas</h3>
 
-    <form id="agregar" class="ocultar" action="./../../assets/maquinaria/agregarMaquinaria.php" method="post" autocomplete="off">
-        <div>
-            <label for="nombre">Tipo de maquinaría</label>
-            <br>
-            <input type="text" name="tipo" id="tipo" autocomplete="off" placeholder="Motoconformadora">
-        </div>
-        <div>
-            <label for="tipo">Marca de la maquinaria</label>
-            <br>
-            <input type="text" name="marca" id="marca" autocomplete="off" placeholder="Cartepillar">
-        </div>
-        <div>
-            <label for="tipo">Código de la maquinaria</label>
-            <br>
-            <input type="text" name="codigo" id="codigo" autocomplete="off" placeholder="140M">
-        </div>
-        <div>
-            <label for="descripcion">Escribe una descripción de la maquina</label>
-            <br>
-            <textarea name="descripcion" id="descripcion" placeholder="Escribe aqui la descripcion de la maquina."></textarea>
-        </div>
-        <div>
-            <label for="situacion">Situiación de la maquina</label>
-            <br>
-            <select name="situacion" id="situacion">
-                <option value="1">Disponible</option>
-                <option value="0">No disponible</option>
-            </select>
-        </div>
-        <div id="botonFormulario">
-            <button type="reset" class="boton">Limpiar</button>
-            <button type="submit" class="boton">Guardar</button>
-        </div>
-    </form>
+        <a class="boton" (click)="intercambiar()">Crear una entrada</a>
+        <form id="agregar" class="ocultar" action="./../../assets/maquinaria/agregarMaquinaria.php" method="post" autocomplete="off">
+            <div>
+                <label for="nombre">Tipo de maquinaría</label>
+                <br>
+                <input type="text" name="tipo" id="tipo" autocomplete="off" placeholder="Motoconformadora">
+            </div>
+            <div>
+                <label for="tipo">Marca de la maquinaria</label>
+                <br>
+                <input type="text" name="marca" id="marca" autocomplete="off" placeholder="Cartepillar">
+            </div>
+            <div>
+                <label for="tipo">Código de la maquinaria</label>
+                <br>
+                <input type="text" name="codigo" id="codigo" autocomplete="off" placeholder="140M">
+            </div>
+            <div>
+                <label for="descripcion">Escribe una descripción de la maquina</label>
+                <br>
+                <textarea name="descripcion" id="descripcion" placeholder="Escribe aqui la descripcion de la maquina."></textarea>
+            </div>
+            <div>
+                <label for="situacion">Situiación de la maquina</label>
+                <br>
+                <select name="situacion" id="situacion">
+                    <option value="1">Disponible</option>
+                    <option value="0">No disponible</option>
+                </select>
+            </div>
+            <div id="botonFormulario">
+                <button type="reset" class="boton">Limpiar</button>
+                <button type="submit" class="boton">Guardar</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="contenedores">
+        <h3>Entradas guardadas</h3>
+    </div>
 
 </section>
