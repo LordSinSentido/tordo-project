@@ -124,6 +124,21 @@ button{
     cursor: pointer;
 }
 
+.migas{
+    display: flex;
+    align-items: center;
+    margin-bottom: 2em;
+}
+
+.migas > h2{
+    margin: 0;
+    margin-left: 0.5em;
+}
+
+.migas > .boton{
+    padding: 0.5em 1em;
+}
+
 .ocultar{
     display: none;
     visibility: collapse;
@@ -187,7 +202,6 @@ button{
 .botonera, .botoneraIzquierda{
     display: flex;
     justify-content: flex-start;
-    margin-bottom: 1em;
 }
 
 .botonera > .boton, .botoneraIzquierda > .boton{
@@ -197,7 +211,6 @@ button{
 .botoneraDerecha, .formularioBotonera{
     display: flex;
     justify-content: flex-end;
-    margin-bottom: 1em;
 }
 
 .botoneraDerecha > .boton, .formularioBotonera > .boton{

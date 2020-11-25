@@ -26,55 +26,63 @@
     </header>
 
     <section id="acciones">
-        <h2>Panel de maquinarías</h2>
+        <div class="migas">
+            <a href="inicio.html" class="boton">&#10094;</a>
+            <h2>Panel de maquinarías</h2>
+        </div>
 
         <h3>Acciones rápidas</h3>
         <div class="botoneraIzquierda">
-            <a class="boton" id="agregar">Agregar</a>
-            <a class="boton botonBloqueado" id="editar">Editar</a>
+            <a class="boton">Ver</a>
+            <a id="agregar" class="boton">Agregar</a>
+            <a class="boton">Actualizar</a>
+            <a class="boton">Eliminar</a>
         </div>
+    </section>
 
-        <h3>Agregar nueva maquinaria</h3>
-
-        <form action="php/agregarMaquinaria.php" method="post" autocomplete="off">
+    <section>
+        <form id="formularioOcultar" class="ocultar" action="php/agregarMaquinaria.php" method="post" autocomplete="off">
+            <h3>Agregar nueva maquinaria</h3>
 
             <div class="formularioElemento">
-                <label for="nombre">Tipo de maquinaría</label>
-                <input type="text" name="tipo" id="tipo" autocomplete="off" placeholder="Motoconformadora">
+                <label for="tipo">Tipo de maquinaría</label>
+                <input type="text" name="tipo" id="tipo" placeholder="Motoconformadora">
             </div>
+
             <div class="formularioElemento">
-                <label for="nombre">Tipo de maquinaría</label>
-                <textarea name="descripcion" id="descripcion" placeholder="descripcion"></textarea>
+                <label for="modelo">Modelo de la maquinaría</label>
+                <input type="text" name="modelo" id="modelo" placeholder="140 M" >
             </div>
-            
+
             <div class="formularioElemento">
-                <label for="situacion">Situiación de la maquina</label>
-                <select name="situacion" id="situacion">
+                <label for="marca">Marca de la maquinaría</label>
+                <input type="text" name="marca" id="marca" placeholder="Caterpillar" >
+            </div>
+
+            <div class="formularioElemento">
+                <label for="descripcion">Descripción de la maquinaría</label>
+                <textarea name="descripcion" id="descripcion" placeholder="La maquína está en buen estado..."></textarea>
+            </div>
+
+            <div class="formularioElemento">
+                <label for="numeroSerie">Número de serie de la maquinaría</label>
+                <input type="text" name="numeroSerie" id="numeroSerie" placeholder="CAD0000XXXXX00000X">
+            </div>
+
+            <div class="formularioElemento">
+                <label for="estatus">Estatus de la maquina</label>
+                <select name="estatus" id="estatus">
                     <option value="1">Disponible</option>
                     <option value="0">No disponible</option>
                 </select>
             </div>
+
             <div class="formularioBotonera">
                 <button type="reset" class="boton">Limpiar</button>
                 <button type="submit" class="boton">Agregar</button>
             </div>
         </form>
-
-    </section>
-
-    <section class="ocultar" id="seccionEditar">
-        <h2>Editar una maquina</h2>
-    </section>
-    <section class="ocultar" id="seccionEliminar">
-        <h2>Eliminar una maquina</h2>
-    </section>
-
-    <section id="maquinariaGuardada">
-        <h2>Maquinaria guardada</h2>
-        <div class="grid" id="importacion">
-            
-        </div>
-    </section>
+</section>
 
     <script src="js/panel.js"></script> 
 </body>
