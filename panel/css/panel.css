@@ -124,6 +124,14 @@ button{
     cursor: pointer;
 }
 
+table{
+    width: 100%;
+}
+
+.tablaTitulo{
+    font-weight: bold;
+}
+
 .migas{
     display: flex;
     align-items: center;
@@ -276,6 +284,8 @@ button{
     flex-direction: column;
     margin-bottom: 1em;
 }
+
+
 
 #usuario{
     width: fit-content;

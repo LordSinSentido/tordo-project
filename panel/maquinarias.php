@@ -33,14 +33,14 @@
 
         <h3>Acciones rápidas</h3>
         <div class="botoneraIzquierda">
-            <a class="boton">Ver</a>
+            <a id="ver" class="boton">Ver</a>
             <a id="agregar" class="boton">Agregar</a>
-            <a class="boton">Actualizar</a>
-            <a class="boton">Eliminar</a>
+            <a id="editar" class="boton">Actualizar</a>
+            <a id="eliminar" class="boton">Eliminar</a>
         </div>
     </section>
 
-    <section id="formularioOcultar" class="ocultar">
+    <section id="panelAgregar" class="ocultar">
         <form action="php/maquinarias/agregarMaquinaria.php" method="post" autocomplete="off">
             <h3>Agregar nueva maquinaria</h3>
 
@@ -84,19 +84,45 @@
         </form>
     </section>
 
-    <section>
-        <h3>Elementos guardados</h3>
-        <?php
-        include("php/conexion/casper.php");
-        $leer = "SELECT * FROM maquinarias";
-        $query = $conexion->query($leer);
+    <section id="panelVer">
+        <h3>Entradas guardadas</h3>
+    </section>
 
-        if ($query == true) {
-            while ($datos = mysqli_fetch_array($query)) {
-                echo '<p>' . $datos['numeroSerie'] . $datos['tipo'] . $datos['marca'] . '</p>';
-            }
-        }
-        ?>
+    <section id="panelEditar" class="ocultar">
+        <h3>Selecciona la entrada que deseas editar</h3>
+
+        <table>
+            <tr>
+                <td class="tablaTitulo">Número de serie</td>
+                <td class="tablaTitulo">Tipo</td>
+                <td class="tablaTitulo">Modelo</td>
+                <td class="tablaTitulo">Marca</td>
+                <td class="tablaTitulo">Descripción</td>
+                <td class="tablaTitulo">Estatus</td>
+            </tr>
+                <?php
+                include("php/conexion/casper.php");
+                $leer = "SELECT * FROM maquinarias";
+                $query = $conexion->query($leer);
+
+                if ($query == true) {
+                    while ($datos = mysqli_fetch_array($query)) {
+                        echo '<tr>';
+                        echo '<td>' . $datos['numeroSerie'] . '</td>';
+                        echo '<td>' . $datos['tipo'] . '</td>';
+                        echo '<td>' . $datos['modelo'] . '</td>';
+                        echo '<td>' . $datos['marca'] . '</td>';
+                        echo '<td>' . $datos['descripcion'] . '</td>';
+                        echo '<td>' . $datos['estatus'] . '</td>';
+                        echo '</tr>';
+                    }
+                }
+                ?>
+        </table>
+    </section>
+
+    <section id="panelEliminar" class="ocultar">
+        <h3>Selecciona la entrada que deseas eliminar</h3>
     </section>
 
     <script src="js/panel.js"></script> 
