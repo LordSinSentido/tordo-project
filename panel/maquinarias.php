@@ -85,6 +85,7 @@
     </section>
 
     <section>
+        <h3>Elementos guardados</h3>
         <?php
         include("php/conexion/casper.php");
         $leer = "SELECT * FROM maquinarias";
