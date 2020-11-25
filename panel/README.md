@@ -82,23 +82,23 @@ A continuación, se muestra el código de como tendría que quedar un formulario
 <form action="archivoPHP" method="post" autocomplete="off">
     //  Input de tipo texto
     <div class="formularioElemento">
-        <label for="nombre">Titulo</label>
+        <label for="atributoMySQL">Titulo</label>
         <input type="text" name="atributoMySQL" id="atributoMySQL" placeholder="ejemplo">
     </div>
 
     //  Textarea
     <div class="formularioElemento">
-        <label for="nombre">Tipo de maquinaría</label>
-        <textarea name="descripcion" id="descripcion" placeholder="descripcion"></textarea>
+        <label for="atributoMySQL">Titulo</label>
+        <textarea name="atributoMySQL" id="atributoMySQL" placeholder="ejemplo"></textarea>
     </div>
     
     //  Selector de opciones
     <div class="formularioElemento">
-        <label for="situacion">Situiación de la maquina</label>
-        <select name="situacion" id="situacion">
+        <label for="atributoMySQL">Titulo</label>
+        <select name="atributoMySQL" id="atributoMySQL">
             //  Opciones del selector
-            <option value="1">Disponible</option>
-            <option value="0">No disponible</option>
+            <option value="opciónUno">opciónUno</option>
+            <option value="opciónDos">No opciónDos</option>
         </select>
     </div>
 
@@ -111,4 +111,101 @@ A continuación, se muestra el código de como tendría que quedar un formulario
         <button type="submit" class="boton">Agregar</button>
     </div>
 </form>
+```
+
+## Estructura de los paneles
+La base de la estructura de los paneles es la siguiene:
+```
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tordo | MAGI</title>
+    <link rel="shortcut icon" href="img/icons/logo.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="css/panel.css">
+    <link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div id="navegacion">
+            <div class="logotipo">
+                <img id="logo" src="img/icons/logo.svg" alt="Logotipo">
+                <div>
+                    <h1>Tordo tecnologías</h1>
+                    <p>Módulo de administración y gestión integral</p>
+                </div>
+            </div>
+            <nav>
+                <p id="usuario">annaGtrrz@tordotec.com</p>
+                <a href="" class="boton">Cerrar sesión</a>
+            </nav>
+        </div>
+    </header>
+
+    <section id="acciones">
+        <div class="migas">
+            <a href="inicio.php" class="boton">&#10094;</a>
+            <h2>Panel de Titulo</h2>
+        </div>
+
+        <h3>Acciones rápidas</h3>
+        <div class="botoneraIzquierda">
+            <a class="boton">Ver</a>
+            <a id="agregar" class="boton">Agregar</a>
+            <a class="boton">Actualizar</a>
+            <a class="boton">Eliminar</a>
+        </div>
+    </section>
+
+    <section id="formularioOcultar" class="ocultar">
+        <form action="archivoPHP" method="post" autocomplete="off">
+            //  Input de tipo texto
+            <div class="formularioElemento">
+                <label for="atributoMySQL">Titulo</label>
+                <input type="text" name="atributoMySQL" id="atributoMySQL" placeholder="ejemplo">
+            </div>
+
+            //  Textarea
+            <div class="formularioElemento">
+                <label for="atributoMySQL">Titulo</label>
+                <textarea name="atributoMySQL" id="atributoMySQL" placeholder="ejemplo"></textarea>
+            </div>
+            
+            //  Selector de opciones
+            <div class="formularioElemento">
+                <label for="atributoMySQL">Titulo</label>
+                <select name="atributoMySQL" id="atributoMySQL">
+                    //  Opciones del selector
+                    <option value="opciónUno">opciónUno</option>
+                    <option value="opciónDos">No opciónDos</option>
+                </select>
+            </div>
+
+            //  Botonera del formulario
+            <div class="formularioBotonera">
+                // Botón para limpiar el formulario
+                <button type="reset" class="boton">Limpiar</button>
+
+                //  Botón para enviar el formulario
+                <button type="submit" class="boton">Agregar</button>
+            </div>
+        </form>
+    </section>
+
+    <section>
+        <h3>Elementos guardados</h3>
+        <?php
+        //  Código PHP
+        ?>
+    </section>
+
+    <script src="js/panel.js"></script> 
+</body>
+</html>
+
+<?php
+$conexion->close();
+die();
+?>
 ```
