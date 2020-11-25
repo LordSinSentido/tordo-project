@@ -194,13 +194,13 @@ button{
     margin-right: 1em;
 }
 
-.botoneraDerecha{
+.botoneraDerecha, .formularioBotonera{
     display: flex;
     justify-content: flex-end;
     margin-bottom: 1em;
 }
 
-.botoneraDerecha > .boton{
+.botoneraDerecha > .boton, .formularioBotonera > .boton{
     margin-left: 1em;
 }
 
