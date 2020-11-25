@@ -2,6 +2,7 @@
 
 Este proyecto ya tiene por defecto algunas clases que dan estilos rápidos a algunos elementos de HTML, a continuación, se litan cuales de esos elementos y su respectivo código para generarlos.
 
+## Índice
  - [Botones y anclas](#botones)
  - [Toast](#toast)
 
