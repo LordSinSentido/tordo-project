@@ -279,6 +279,41 @@ table{
     font-weight: bold;
 }
 
+.tarjeta{
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border: 0.25em solid var(--color_oscuro);
+    border-radius: 0.25em;
+    transition: 0.2s;
+    background: white;
+}
+
+.tarjeta:hover{
+    border: 0.25em solid var(--color_realce);
+    transition: 0.2s;
+}
+
+.tarjetaCuerpo {
+    margin: 1em 0em;
+    padding: 0em 2em;
+}
+
+.tarjetaImagen > img{
+    width: 100%;
+}
+
+.tarjetaTitulo {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
+
+.tarjetaSubtitulo {
+    font-weight: bold;
+    margin-top: 0.5em;
+}
+
 .formularioElemento{
     display: flex;
     flex-direction: column;

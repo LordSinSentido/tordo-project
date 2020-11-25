@@ -27,7 +27,7 @@
 
     <section id="acciones">
         <div class="migas">
-            <a href="inicio.html" class="boton">&#10094;</a>
+            <a href="inicio.php" class="boton">&#10094;</a>
             <h2>Panel de maquinarías</h2>
         </div>
 
@@ -86,6 +86,46 @@
 
     <section id="panelVer">
         <h3>Entradas guardadas</h3>
+
+        <div class="grid">
+
+            <?php
+                include("php/conexion/casper.php");
+                $leer = "SELECT * FROM maquinarias";
+                $query = $conexion->query($leer);
+
+                if ($query == true) {
+                    while ($datos = mysqli_fetch_array($query)) {
+                        echo <<<END
+                        <div class="tarjeta">
+                            <div class="tarjetaImagen">
+                                <img src="" alt="Example">
+                            </div>
+                            <div class="tarjetaCuerpo">
+                                <p class="tarjetaTitulo">$datos[1]</p>
+                                <p class="tarjetaSubtitulo">Modelo</p>
+                                <p class="tarjetaTexto">$datos[3]</p>
+                                <p class="tarjetaSubtitulo">Marca</p>
+                                <p class="tarjetaTexto">$datos[2]</p>
+                                <p class="tarjetaSubtitulo">Descripción</p>
+                                <p class="tarjetaTexto">$datos[4]</p>
+                                <p class="tarjetaSubtitulo">Estatus</p>
+                        END;
+                        if ($datos[5] == 1) {
+                            echo '<p class="tarjetaTexto">Disponible</p>';
+                        }else {
+                            echo '<p class="tarjetaTexto">No disponible</p>';
+                        }
+                        echo <<<END
+                                <p class="tarjetaSubtitulo">Número de serie</p>
+                                <p class="tarjetaTexto">$datos[0]</p>
+                            </div>
+                        </div>
+                        END;
+                    }
+                }
+            ?>
+        </div>
     </section>
 
     <section id="panelEditar" class="ocultar">
@@ -107,14 +147,22 @@
 
                 if ($query == true) {
                     while ($datos = mysqli_fetch_array($query)) {
-                        echo '<tr>';
-                        echo '<td>' . $datos['numeroSerie'] . '</td>';
-                        echo '<td>' . $datos['tipo'] . '</td>';
-                        echo '<td>' . $datos['modelo'] . '</td>';
-                        echo '<td>' . $datos['marca'] . '</td>';
-                        echo '<td>' . $datos['descripcion'] . '</td>';
-                        echo '<td>' . $datos['estatus'] . '</td>';
-                        echo '</tr>';
+                        echo <<<END
+                        <tr>
+                            <td>$datos[0]</td>
+                            <td>$datos[1]</td>
+                            <td>$datos[3]</td>
+                            <td>$datos[2]</td>
+                            <td>$datos[4]</td>
+                        END;
+                        if ($datos[5] == 1) {
+                            echo '<td>Disponible</td>';
+                        }else {
+                            echo '<td>No disponible</td>';
+                        }
+                        echo <<<END
+                        </tr>
+                        END;
                     }
                 }
                 ?>
