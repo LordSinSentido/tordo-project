@@ -8,10 +8,13 @@ Este proyecto ya tiene por defecto algunas clases que dan estilos rápidos a alg
 La creación de botones o anclas es muy fácil, simplemente lo que hay que hacer es darle la clase `boton` al boton o ancla deseada. Por ejemplo:
 
 Si deseas crear un ancla, el código sería el siguiente:
+```
     <a href="link" class="boton">Texto</a>
-
+```
 Si deseas crear un boton, el código sería el siguiente:
+```
     <button class="boton">Texto</button>
+```
 
 **Nota:** recuerda que las anclas se utilizan para colocar enlaces a otras paginas o dentro de la misma página, los botones son utilizados para ejecutar acciones de javascript.
 
@@ -19,6 +22,7 @@ Si deseas crear un boton, el código sería el siguiente:
 Los *toast* son similares a las tarjetas, solo que estos solamente se conforman de un icono, un titulo y su descripción, tambien pueden llevar botones en la parte de abajo.
 
 Para crear un toast normal se necesita el siguiente código:
+```
     <div class="toast">
         <div class="toastIcono">
             <img src="urlDeLaImagen" alt="descripciónDeLaImagen" class="icono">
@@ -28,8 +32,10 @@ Para crear un toast normal se necesita el siguiente código:
             <p>Descripción.</p>
         </div>
     </div>
+```
 
 Si deseas crear un toast con botón, el código es el siguiente:
+```
     <div class="toast">
         <div class="toastIcono">
             <img src="urlDeLaImagen" alt="descripciónDeLaImagen" class="icono">
@@ -42,3 +48,4 @@ Si deseas crear un toast con botón, el código es el siguiente:
             <a href="link" class="boton">Texto</a>
         </div>
     </div>
+```
