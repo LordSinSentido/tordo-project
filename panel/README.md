@@ -5,7 +5,7 @@ Este proyecto ya tiene por defecto algunas clases que dan estilos rápidos a alg
  - [Botones y anclas](#botones)
  - [Toast](#toast)
 
-## Botones y anclas{#botones}
+## Botones y anclas {#botones}
 La creación de botones o anclas es muy fácil, simplemente lo que hay que hacer es darle la clase `boton` al boton o ancla deseada. Por ejemplo:
 
 Si deseas crear un ancla, el código sería el siguiente:
@@ -19,7 +19,7 @@ Si deseas crear un boton, el código sería el siguiente:
 
 **Nota:** recuerda que las anclas se utilizan para colocar enlaces a otras paginas o dentro de la misma página, los botones son utilizados para ejecutar acciones de javascript.
 
-## Toast{#toast}
+## Toast {#toast}
 Los *toast* son similares a las tarjetas, solo que estos solamente se conforman de un icono, un titulo y su descripción, tambien pueden llevar botones en la parte de abajo.
 
 Para crear un toast normal se necesita el siguiente código:
