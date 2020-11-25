@@ -12,14 +12,13 @@
 
 body{
     font-family: 'Didact Gothic', sans-serif;
-    background: #eee;
 }
 
 nav{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 0.5em;
+    display: flex;
+    flex-direction: column;
     margin: 1em 0em;
+    align-items: center;
     align-self: center;
 }
 
@@ -133,6 +132,7 @@ button{
 }
 
 .boton{
+    width: fit-content;
     display: block;
     background: none;
     padding: 0.75em 1.5em;
@@ -180,8 +180,8 @@ button{
     max-height: auto;
 }
 
-.iconos{
-    width: 5em;
+.icono{
+    height: 5em;
 }
 
 .grid{
@@ -206,114 +206,41 @@ button{
     transition: 0.2s;
 }
 
+.toastCuerpo{
+    margin: 0.5em 0em;
+}
+
+.toastBotonera{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin: 0.5em 0em;
+}
+
 .toastIcono{
     align-self: center;
-    margin-bottom: 1em;
+    margin: 0.5em 0em;
 }
 
-.toastEnlace{
-    color: var(--color_enfasis);
+.toastTitulo{
+    font-size: 1.5em;
     font-weight: bold;
-    cursor: pointer;
+}
+
+#usuario{
+    width: fit-content;
+    display: block;
+    background: none;
+    padding: 0.75em 1.5em;
+    margin: 0.25em 0em;
+    text-align: right   ;
+    font-weight: bold;
     text-decoration: none;
-}
-
-.card{
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    border: 0.25em solid var(--color_oscuro);
+    border: 0.25em solid white;
     border-radius: 0.25em;
-    transition: 0.2s;
-}
-
-.card:hover{
-    border: 0.25em solid var(--color_realce);
-    transition: 0.2s;
-}
-
-.cardImg > img{
-    width: 100%;
-}
-
-.cardTitulo {
-    font-size: 1.2em;
-}
-
-.cardCuerpo {
-    padding: 0em 1.5em;
-    margin-top: 1em;
-}
-
-.cardPie {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    justify-content: flex-end;
-    align-items: flex-end;
-    padding: 0em 1.5em;
-    margin: 1em 0em;
-}
-
-.modalContenedor{
-    position: fixed;
-    visibility: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.75);
-}
-
-.modal{
-    display: grid;
-    grid-template-columns: 1fr;
-    width: 100%;
-    height: 100%;
-    background: white;
-    border-radius: 0.25em;
-    overflow: auto;
-}
-
-.modalContenido{
-    padding: 5vh 5vw;
-}
-
-.modalCuerpo{
-    padding: 0em 1em;
-}
-
-.modalSubtitulo{
-    margin-top: 1em;
-    color: var(--color_enfasis);
-}
-
-.modalPie{
-    display: flex;
-    flex: 1;
-    justify-content: flex-end;
-    align-items: flex-end;
-    margin-top: 1em;
-}
-  
-.gallery-cell {
-    width: 66%;
-    height: 25vh;
-    margin-right: 10px;
-    counter-increment: gallery-cell;
-    display: flex;
-    justify-content: center;
-    overflow: hidden;
-}
-
-.flickity-page-dots{
-    visibility: hidden;
-}
-
-/* cell number */
-.gallery-cell > img{
-    height: 100%;
+    color: var(--color_oscuro);
 }
 
 #navegacion{
@@ -343,14 +270,9 @@ button{
     width: fit-content;
 }
 
-#copyright{
-    margin-top: 5em;
-    text-align: center;
-}
-
 @media screen and (min-width: 720px) {
     nav{
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        flex-flow: row;
     }
 
     section{
@@ -369,21 +291,6 @@ button{
     .grid{
         grid-template-columns: 1fr 1fr;
     }
-
-    .modalContenedor {
-        overflow: unset;
-    }
-
-    .modal{
-        width: 75vw;
-        max-height: 90vh;
-        min-height: auto;
-        box-shadow: 0em 0em 5em;
-    }
-    
-    .modalCuerpo{
-        grid-template-columns: 1fr 1fr;
-    }
     
     .logotipo{
         display: flex;
@@ -392,10 +299,6 @@ button{
 
     .logotipo > div{
         text-align: left;
-    }
-
-    .gallery-cell{
-        height: 35vh;
     }
 }
 
@@ -408,16 +311,8 @@ button{
         padding: 1em 5vw;
     }
 
-    .modal{
-        width: 60vw;
-    }
-
     .grid{
         grid-template-columns: 1fr 1fr 1fr;
-    }
-
-    .gallery-cell{
-        height: 50vh;
     }
 }
 
