@@ -5,8 +5,16 @@ Este proyecto ya tiene por defecto algunas clases que dan estilos rápidos a alg
 ## Índice
  - [Botones y anclas](#botones)
  - [Toast](#toast)
+ - [Formularios](#forms)
+    - [Elementos de los formularios](#forms1)
+    - [Titulos de los elementos](#forms2)
+    - [Entradas de tipo texto](#forms3)
+    - [Áreas de texto](#forms4)
+    - [Selector de opciones multiples](#forms5)
+    - [Ejemplo de un formulario completo](#forms6)
+- [Estructura de los paneles](#ejemplo)
 
-## Botones y anclas {#botones}
+## Botones y anclas <a name="botones"></a>
 La creación de botones o anclas es muy fácil, simplemente lo que hay que hacer es darle la clase `boton` al boton o ancla deseada. Por ejemplo:
 
 Si deseas crear un ancla, el código sería el siguiente:
@@ -19,7 +27,7 @@ Si deseas crear un boton, el código sería el siguiente:
 ```
 **Nota:** recuerda que las anclas se utilizan para colocar enlaces a otras paginas o dentro de la misma página, los botones son utilizados para ejecutar acciones de javascript.
 
-## Toast {#toast}
+## Toast <a name="toast"></a>
 Los *toast* son similares a las tarjetas, solo que estos solamente se conforman de un icono, un titulo y su descripción, tambien pueden llevar botones en la parte de abajo.
 
 Para crear un toast normal se necesita el siguiente código:
@@ -51,14 +59,14 @@ Si deseas crear un toast con botón, el código es el siguiente:
 </div>
 ```
 
-## Formularios
+## Formularios <a name="forms"></a>
 Para poder generar un formulario, simplemente utilizamos la etiqueta HTML `form`, por ejemplo:
 ```
 <form action="archivoPHP" method="post" autocomplete="off">
 </form>
 ```
 
-### Elementos de los formularios
+### Elementos de los formularios <a name="forms1"></a>
 Los elementos son las partes que conforman un formulario, en nuestro proyecto estaremos ulizando solamente tres de ellos: los `input` de tipo `text`, `textarea` y `select`.
 Cada elemento tiene que estar dentro de un `div` con la clase `formularioElemento`, tal cual se muestra a continuación:
 ```
@@ -66,17 +74,31 @@ Cada elemento tiene que estar dentro de un `div` con la clase `formularioElement
 </div>
 ```
 
-#### Titulos de los elementos
+#### Titulos de los elementos <a name="forms2"></a>
+Cada elemento de un formulario debe de llevar su titulo, para así indicar al usuario que información manejará dicho elemento. Esto se hace mediante la etiqueta `label`, un ejemplo de como utlizar esto es el siguiente:
+```
+<label for="atributoMySQL">Titulo</label>
+```
+Esta etiqueta debe de estar dentro del div con clase `formularioElemento`, y debe de estar antes del elemento que se desea colocar. 
 
-
-#### `Inputs` de tipo `text`
+#### Entradas de tipo texto <a name="forms3"></a>
 Los `inputs` son recuadros pequeños en donde solo se introduce textos cortos. Para utilizarlos simplemente usamos la etiqueta `input` seguido del atributo `type`, en donde se le indica al navegador que es de tipo `text`, por ejemplo:
 ```
 <input type="text" name="atributoMySQL" id="atributoMySQL" placeholder="ejemplo">
 ```
 **Nota:** en el campo de `name` y `id` se pondrá el nombre del atributo que se escogío en mySQL, para así evitar confuciones. Además, es recomendable colocar un ejemplo en el atributo `placeholder` para que el usuario tenga una idea de lo podrá ingrear.
 
-#### Ejemplo de un formulario completo
+#### Áreas de texto <a name="forms4"></a>
+Las `textarea` son elementos que sirven para que el usuario ingrese varias líneas de texto. Su sintaxis es la siguiente:
+```
+<textarea name="atributoMySQL" id="atributoMySQL" placeholder="ejemplo"></textarea>
+```
+**Nota:** en el campo de `name` y `id` se pondrá el nombre del atributo que se escogío en mySQL, para así evitar confuciones. Además, es recomendable colocar un ejemplo en el atributo `placeholder` para que el usuario tenga una idea de lo podrá ingrear.
+
+#### Selector de opciones multiples <a name="forms5"></a>
+
+
+#### Ejemplo de un formulario completo <a name="ejemplo"></a>
 A continuación, se muestra el código de como tendría que quedar un formulario:
 ```
 <form action="archivoPHP" method="post" autocomplete="off">
