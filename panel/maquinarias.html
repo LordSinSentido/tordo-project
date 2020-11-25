@@ -12,58 +12,49 @@
     <header>
         <div id="navegacion">
             <div class="logotipo">
-                <img id="logo" src="../img/icons/logo.svg" alt="Logotipo">
+                <img id="logo" src="img/icons/logo.svg" alt="Logotipo">
                 <div>
                     <h1>Tordo tecnologías</h1>
-                    <p>Calidad en construcción subterránea</p>
+                    <p>Módulo de administración y gestión integral</p>
                 </div>
             </div>
             <nav>
+                <p id="usuario">annaGtrrz@tordotec.com</p>
+                <a href="" class="boton">Cerrar sesión</a>
             </nav>
         </div>
     </header>
+
     <section id="acciones">
-        <h2>Acciones que puedes realizar</h2>
-        <div id="botonera">
+        <h2>Panel de maquinarías</h2>
+
+        <h3>Acciones rápidas</h3>
+        <div class="botoneraIzquierda">
             <a class="boton" id="agregar">Agregar</a>
             <a class="boton botonBloqueado" id="editar">Editar</a>
-            <a class="boton botonBloqueado" id="eliminar">Eliminar</a>
         </div>
-    </section>
-    
-    <section class="ocultar" id="seccionAgregar">
-        <h2>Agregar nueva maquinaria</h2>
+
+        <h3>Agregar nueva maquinaria</h3>
 
         <form action="php/agregarMaquinaria.php" method="post" autocomplete="off">
-            <div>
+
+            <div class="formularioElemento">
                 <label for="nombre">Tipo de maquinaría</label>
-                <br>
                 <input type="text" name="tipo" id="tipo" autocomplete="off" placeholder="Motoconformadora">
             </div>
-            <div>
-                <label for="tipo">Marca de la maquinaria</label>
-                <br>
-                <input type="text" name="marca" id="marca" autocomplete="off" placeholder="Cartepillar">
+            <div class="formularioElemento">
+                <label for="nombre">Tipo de maquinaría</label>
+                <textarea name="descripcion" id="descripcion" placeholder="descripcion"></textarea>
             </div>
-            <div>
-                <label for="tipo">Código de la maquinaria</label>
-                <br>
-                <input type="text" name="codigo" id="codigo" autocomplete="off" placeholder="140M">
-            </div>
-            <div>
-                <label for="descripcion">Escribe una descripción de la maquina</label>
-                <br>
-                <textarea name="descripcion" id="descripcion" placeholder="Escribe aqui la descripcion de la maquina."></textarea>
-            </div>
-            <div>
+            
+            <div class="formularioElemento">
                 <label for="situacion">Situiación de la maquina</label>
-                <br>
                 <select name="situacion" id="situacion">
                     <option value="1">Disponible</option>
                     <option value="0">No disponible</option>
                 </select>
             </div>
-            <div id="botonFormulario">
+            <div class="botoneraDerecha">
                 <button type="reset" class="boton">Limpiar</button>
                 <button type="submit" class="boton">Agregar</button>
             </div>
