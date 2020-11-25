@@ -86,19 +86,26 @@ Los `inputs` son recuadros pequeños en donde solo se introduce textos cortos. P
 ```
 <input type="text" name="atributoMySQL" id="atributoMySQL" placeholder="ejemplo">
 ```
-**Nota:** en el campo de `name` y `id` se pondrá el nombre del atributo que se escogío en mySQL, para así evitar confuciones. Además, es recomendable colocar un ejemplo en el atributo `placeholder` para que el usuario tenga una idea de lo podrá ingrear.
+**Nota:** en el campo de `name` y `id` se pondrá el nombre del atributo que se escogío en mySQL, para así evitar confusiones. Además, es recomendable colocar un ejemplo en el atributo `placeholder` para que el usuario tenga una idea de lo podrá ingrear.
 
 #### Áreas de texto <a name="forms4"></a>
 Las `textarea` son elementos que sirven para que el usuario ingrese varias líneas de texto. Su sintaxis es la siguiente:
 ```
 <textarea name="atributoMySQL" id="atributoMySQL" placeholder="ejemplo"></textarea>
 ```
-**Nota:** en el campo de `name` y `id` se pondrá el nombre del atributo que se escogío en mySQL, para así evitar confuciones. Además, es recomendable colocar un ejemplo en el atributo `placeholder` para que el usuario tenga una idea de lo podrá ingrear.
+**Nota:** en el campo de `name` y `id` se pondrá el nombre del atributo que se escogío en mySQL, para así evitar confusiones. Además, es recomendable colocar un ejemplo en el atributo `placeholder` para que el usuario tenga una idea de lo podrá ingrear.
 
 #### Selector de opciones multiples <a name="forms5"></a>
+Este elemeto es creado a partir de la etiqueta `select`, en ella van los atributos de `name` y `id`, los cuales son el nombre del atributo seleccionado para mySQL, dentro de la etiqueta va otra etiqueta llamada `option`, la cual represente un opción de la lista desplegable, esta última etiqueta tiene el atributo `value`, el cual tendrá el valor que se desea mandar al servidor. Un ejemplo de este elemento es el siguiente:
+```
+<select name="atributoMySQL" id="atributoMySQL">
+    <option value="opciónUno">opciónUno</option>
+    <option value="opciónDos">No opciónDos</option>
+</select>
+```
+**Nota:** en el campo de `name` y `id` se pondrá el nombre del atributo que se escogío en mySQL, para así evitar confusiones.
 
-
-#### Ejemplo de un formulario completo <a name="ejemplo"></a>
+#### Ejemplo de un formulario completo <a name="forms6"></a>
 A continuación, se muestra el código de como tendría que quedar un formulario:
 ```
 <form action="archivoPHP" method="post" autocomplete="off">
@@ -135,7 +142,7 @@ A continuación, se muestra el código de como tendría que quedar un formulario
 </form>
 ```
 
-## Estructura de los paneles
+## Estructura de los paneles <a name="ejemplo"></a>
 La base de la estructura de los paneles es la siguiene:
 ```
 <!DOCTYPE html>
