@@ -40,8 +40,8 @@
         </div>
     </section>
 
-    <section>
-        <form id="formularioOcultar" class="ocultar" action="php/agregarMaquinaria.php" method="post" autocomplete="off">
+    <section id="formularioOcultar" class="ocultar">
+        <form action="php/maquinarias/agregarMaquinaria.php" method="post" autocomplete="off">
             <h3>Agregar nueva maquinaria</h3>
 
             <div class="formularioElemento">
@@ -82,8 +82,27 @@
                 <button type="submit" class="boton">Agregar</button>
             </div>
         </form>
-</section>
+    </section>
+
+    <section>
+        <?php
+        include("php/conexion/casper.php");
+        $leer = "SELECT * FROM maquinarias";
+        $query = $conexion->query($leer);
+
+        if ($query == true) {
+            while ($datos = mysqli_fetch_array($query)) {
+                echo '<p>' . $datos['numeroSerie'] . $datos['tipo'] . $datos['marca'] . '</p>';
+            }
+        }
+        ?>
+    </section>
 
     <script src="js/panel.js"></script> 
 </body>
 </html>
+
+<?php
+$conexion->close();
+die();
+?>

@@ -1,13 +1,14 @@
 <?php
-    include("../conexion/melchior.php");
+   include("../conexion/melchior.php");
 
+    $numeroSerie = $_POST['numeroSerie'];
     $tipo = $_POST['tipo'];
     $marca = $_POST['marca'];
-    $codigo = $_POST['codigo'];
+    $modelo = $_POST['modelo'];
     $descripcion = $_POST['descripcion'];
-    $situacion = $_POST['situacion'];
+    $estatus = $_POST['estatus'];
 
-    $annadir = "INSERT INTO maquinaria (tipo,marca,codigo,descripcion,situacion) VALUES ('$tipo','$marca','$codigo','$descripcion',$situacion)";
+    $annadir = "INSERT INTO maquinarias (numeroSerie,tipo,marca,modelo,descripcion,estatus) VALUES ('$numeroSerie','$tipo','$marca','$modelo','$descripcion',$estatus)";
 
     if ($conexion->query($annadir) == TRUE) {
         echo "Petición procesada.";
@@ -17,7 +18,7 @@
 
     $conexion->close();
 
-    header("Location: ../maquinaria.html");
+    header("Location: ../../maquinarias.php");
 
     die();
 ?>

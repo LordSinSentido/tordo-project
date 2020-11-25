@@ -1,8 +1,8 @@
 <?php
     $servidor = "localhost";
-    $usuario = "casper";
-    $contrasenna = "casper@MAGI";
-    $daseDeDatos = "tordotec_magi";
+    $usuario = "root"; //melchior
+    $contrasenna = "";//melchior@MAGI
+    $baseDeDatos = "tordotec_magi";
 
-    $conexion = new mysqli($host,$usuario,$contrasenna,$daseDeDatos) or die("No se ha podido conectar: " . mysql_error());  
+    $conexion = new mysqli($servidor,$usuario,$contrasenna,$baseDeDatos) or die("No se ha podido conectar: " . mysql_error());  
 ?>
