@@ -11,14 +11,26 @@
     $annadir = "INSERT INTO maquinarias (numeroSerie,tipo,marca,modelo,descripcion,estatus) VALUES ('$numeroSerie','$tipo','$marca','$modelo','$descripcion',$estatus)";
 
     if ($conexion->query($annadir) == TRUE) {
-        echo "Petición procesada.";
+        echo <<<END
+
+        <script languaje='javascript'>
+            alert('El registro fue creado exitosamente.');
+            window.location.href="../../maquinarias.php";
+        </script>
+
+        END;
     }else{
-        echo "Hubo un error, intente de nuevo.";
+        echo <<<END
+
+        <script languaje='javascript'>
+            alert('Hubo un problema, comuniquese con el administrador.');
+            window.location.href="../../maquinarias.php";
+        </script>
+
+        END;
     }
 
     $conexion->close();
-
-    header("Location: ../../maquinarias.php");
 
     die();
 ?>
