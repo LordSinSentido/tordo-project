@@ -41,7 +41,7 @@
     </section>
 
     <section id="panelAgregar" class="ocultar">
-        <form action="php/maquinarias/agregarMaquinaria.php" method="post" autocomplete="off">
+        <form action="php/maquinarias/agregarMaquinaria.php" method="post" autocomplete="off" enctype="multipart/form-data">
             <h3>Agregar nueva maquinaria</h3>
 
             <div class="formularioElemento">
@@ -66,7 +66,12 @@
 
             <div class="formularioElemento">
                 <label for="numeroSerie">Número de serie de la maquinaría</label>
-                <input type="text" name="numeroSerie" id="numeroSerie" placeholder="CAD0000XXXXX00000X">
+                <input type="text" name="numeroSerie" id="numeroSerie" placeholder="CAD0000XXXXX00000X" required>
+            </div>
+
+            <div class="formularioElemento">
+                <label for="imagen">Sube una imagen</label>
+                <input type="file" name="imagen" id="imagen" required>
             </div>
 
             <div class="formularioElemento">
@@ -98,7 +103,7 @@
                         echo <<<END
                         <div class="tarjeta">
                             <div class="tarjetaImagen">
-                                <img src="https://img.europapress.es/fotoweb/fotonoticia_20200131140923_420.jpg" alt="Example">
+                                <img src="../inicio/img/maquinaria/$datos[6]" alt="$datos[1] $datos[3] de la marca $datos[2]">
                             </div>
                             <div class="tarjetaCuerpo">
                                 <p class="tarjetaTitulo">$datos[1]</p>
@@ -141,7 +146,7 @@
                         <form action="php/maquinarias/editarMaquinaria.php" method="post" autocomplete="off">
                             <div class="tarjeta">
                                 <div class="tarjetaImagen">
-                                    <img src="https://img.europapress.es/fotoweb/fotonoticia_20200131140923_420.jpg" alt="Example">
+                                    <img src="../inicio/img/maquinaria/$datos[6]" alt="$datos[1] $datos[3] de la marca $datos[2]">
                                 </div>
                                 <div class="tarjetaCuerpo">
                                     <p class="tarjetaTitulo">$datos[1]</p>
@@ -191,7 +196,7 @@
                         <form action="php/maquinarias/eliminarMaquinaria.php" method="post" autocomplete="off">
                             <div class="tarjeta">
                                 <div class="tarjetaImagen">
-                                    <img src="https://img.europapress.es/fotoweb/fotonoticia_20200131140923_420.jpg" alt="Example">
+                                    <img src="../inicio/img/maquinaria/$datos[6]" alt="$datos[1] $datos[3] de la marca $datos[2]">
                                 </div>
                                 <div class="tarjetaCuerpo">
                                     <p class="tarjetaTitulo">$datos[1]</p>

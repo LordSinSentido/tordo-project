@@ -8,7 +8,15 @@
     $descripcion = $_POST['descripcion'];
     $estatus = $_POST['estatus'];
 
-    $annadir = "INSERT INTO maquinarias (numeroSerie,tipo,marca,modelo,descripcion,estatus) VALUES ('$numeroSerie','$tipo','$marca','$modelo','$descripcion',$estatus)";
+    $imagen = $_FILES['imagen']['name'];
+    $binario = $_FILES['imagen']['tmp_name'];
+    $ruta = "../../../inicio/img/maquinaria";
+
+    $ruta = $ruta . '/' . $imagen;
+
+    move_uploaded_file($binario,$ruta);
+
+    $annadir = "INSERT INTO maquinarias (numeroSerie,tipo,marca,modelo,descripcion,estatus,imagen) VALUES ('$numeroSerie','$tipo','$marca','$modelo','$descripcion',$estatus,'$imagen')";
 
     if ($conexion->query($annadir) == TRUE) {
         echo <<<END
