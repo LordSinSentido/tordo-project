@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 25-11-2020 a las 21:20:46
+-- Tiempo de generación: 28-11-2020 a las 07:08:21
 -- Versión del servidor: 10.4.14-MariaDB
 -- Versión de PHP: 7.4.11
 
@@ -33,18 +33,20 @@ CREATE TABLE `maquinarias` (
   `marca` text NOT NULL,
   `modelo` text NOT NULL,
   `descripcion` longtext NOT NULL,
-  `estatus` tinyint(1) NOT NULL
+  `estatus` tinyint(1) NOT NULL,
+  `imagen` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `maquinarias`
 --
 
-INSERT INTO `maquinarias` (`numeroSerie`, `tipo`, `marca`, `modelo`, `descripcion`, `estatus`) VALUES
-('CAD0000ASDFG00000X', 'Motoconformadora', 'Caterpillar', '140 M', 'Excelente estado', 1),
-('CAD0000ASDFG00001X', 'Vibrocompactador', 'Caterpillar', '350', 'Excelente estado', 1),
-('CAD0000ASDFG00002X', 'Retroexcavadora', 'John Deere', '1450 A', 'Excelente estado', 0),
-('CAD0000ASDFG00003X', 'Tractocamión', 'Mack', '2020', 'Último modelo', 1);
+INSERT INTO `maquinarias` (`numeroSerie`, `tipo`, `marca`, `modelo`, `descripcion`, `estatus`, `imagen`) VALUES
+('CAD0000ASDFG00000X', 'Motoconformadora', 'Caterpillar', '140M', 'Excelente estado', 1, 'cat140m.jpg'),
+('CAD0000ASDFG00001X', 'Vibrocompactador', 'Caterpillar', 'CB64', 'Excelente estado', 1, 'catCB64.jpg'),
+('CAD0000ASDFG00002X', 'Retroexcavadora', 'John Deere', '310J', 'Excelente estado', 0, 'deere310J.jpg'),
+('CAD0000ASDFG00003X', 'Camión de volteo', 'Kenworth', 'T800', 'Último modelo', 1, 'kenT800.jpg'),
+('CAD0000ASDFG00004X', 'Motoconformadora', 'Caterpillar', '120G', 'Buen estado', 0, 'cat120g.jpg');
 
 --
 -- Índices para tablas volcadas
