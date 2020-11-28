@@ -138,7 +138,7 @@
                 if ($query == true) {
                     while ($datos = mysqli_fetch_array($query)) {
                         echo <<<END
-                        <form action="php/maquinarias/actualizarMaquinaria.php" method="post" autocomplete="off">
+                        <form action="php/maquinarias/editarMaquinaria.php" method="post" autocomplete="off">
                             <div class="tarjeta">
                                 <div class="tarjetaImagen">
                                     <img src="https://img.europapress.es/fotoweb/fotonoticia_20200131140923_420.jpg" alt="Example">
