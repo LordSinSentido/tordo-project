@@ -124,14 +124,6 @@ button{
     cursor: pointer;
 }
 
-table{
-    width: 100%;
-}
-
-.tablaTitulo{
-    font-weight: bold;
-}
-
 .migas{
     display: flex;
     align-items: center;
@@ -245,6 +237,17 @@ table{
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     grid-gap: 1.5em;
+}
+
+.gridAcciones{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: 1.5em;
+}
+
+.gridAcciones > .boton{
+    width: auto;
 }
 
 .toast{
@@ -384,6 +387,7 @@ table{
 
     .grid{
         grid-template-columns: 1fr 1fr;
+        width: fit-content;
     }
     
     .logotipo{
@@ -407,6 +411,14 @@ table{
 
     .grid{
         grid-template-columns: 1fr 1fr 1fr;
+    }
+    
+    .gridAcciones{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        grid-gap: 1.5em;
+        width: fit-content;
     }
 }
 

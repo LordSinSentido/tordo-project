@@ -32,7 +32,7 @@
         </div>
 
         <h3>Acciones rápidas</h3>
-        <div class="botoneraIzquierda">
+        <div class="gridAcciones">
             <a id="ver" class="boton">Ver</a>
             <a id="agregar" class="boton">Agregar</a>
             <a id="editar" class="boton">Actualizar</a>
