@@ -226,8 +226,7 @@ table{
 }
 
 .botoneraDerecha > .boton,
-.formularioBotonera > .boton,
-.tarjetaBotonera > .boton{
+.formularioBotonera > .boton{
     margin-right: 1em;
 }
 
@@ -318,6 +317,11 @@ table{
 .tarjetaSubtitulo {
     font-weight: bold;
     margin-top: 0.5em;
+}
+
+.tarjetaBotonera{
+    margin: 1em 0em;
+    padding: 0em 2em;
 }
 
 .formularioElemento{

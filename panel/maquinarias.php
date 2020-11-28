@@ -98,7 +98,7 @@
                         echo <<<END
                         <div class="tarjeta">
                             <div class="tarjetaImagen">
-                                <img src="" alt="Example">
+                                <img src="https://img.europapress.es/fotoweb/fotonoticia_20200131140923_420.jpg" alt="Example">
                             </div>
                             <div class="tarjetaCuerpo">
                                 <p class="tarjetaTitulo">$datos[1]</p>
@@ -130,42 +130,51 @@
     <section id="panelEditar" class="ocultar">
         <h3>Selecciona la entrada que deseas editar</h3>
 
-        <table>
-            <tr>
-                <td class="tablaTitulo">Número de serie</td>
-                <td class="tablaTitulo">Tipo</td>
-                <td class="tablaTitulo">Modelo</td>
-                <td class="tablaTitulo">Marca</td>
-                <td class="tablaTitulo">Descripción</td>
-                <td class="tablaTitulo">Estatus</td>
-            </tr>
-                <?php
-                include("php/conexion/casper.php");
+        <div class="grid">
+            <?php
                 $leer = "SELECT * FROM maquinarias";
                 $query = $conexion->query($leer);
 
                 if ($query == true) {
                     while ($datos = mysqli_fetch_array($query)) {
                         echo <<<END
-                        <tr>
-                            <td>$datos[0]</td>
-                            <td>$datos[1]</td>
-                            <td>$datos[3]</td>
-                            <td>$datos[2]</td>
-                            <td>$datos[4]</td>
+                        <form action="php/maquinarias/actualizarMaquinaria.php" method="post" autocomplete="off">
+                            <div class="tarjeta">
+                                <div class="tarjetaImagen">
+                                    <img src="https://img.europapress.es/fotoweb/fotonoticia_20200131140923_420.jpg" alt="Example">
+                                </div>
+                                <div class="tarjetaCuerpo">
+                                    <p class="tarjetaTitulo">$datos[1]</p>
+                                    <p class="tarjetaSubtitulo">Modelo</p>
+                                    <p class="tarjetaTexto">$datos[3]</p>
+                                    <p class="tarjetaSubtitulo">Marca</p>
+                                    <p class="tarjetaTexto">$datos[2]</p>
+                                    <p class="tarjetaSubtitulo">Descripción</p>
+                                    <p class="tarjetaTexto">$datos[4]</p>
+                                    <p class="tarjetaSubtitulo">Estatus</p>
                         END;
                         if ($datos[5] == 1) {
-                            echo '<td>Disponible</td>';
+                            echo '<p class="tarjetaTexto">Disponible</p>';
                         }else {
-                            echo '<td>No disponible</td>';
+                            echo '<p class="tarjetaTexto">No disponible</p>';
                         }
                         echo <<<END
-                        </tr>
+                                    <p class="tarjetaSubtitulo">Número de serie</p>
+                                    <p class="tarjetaTexto">$datos[0]</p>
+                                </div>
+                                <div class="tarjetaBotonera">
+                                    <button type="submit" class="boton">Actualizar</button>
+                                </div>
+                            </div>
+                            <select class="ocultar" name="numeroSerie" id="$datos[0]">
+                                <option value="$datos[0]">$datos[0]</option>
+                            </select>
+                        </form>
                         END;
                     }
                 }
-                ?>
-        </table>
+            ?>
+        </div>
     </section>
 
     <section id="panelEliminar" class="ocultar">
@@ -173,7 +182,6 @@
 
         <div class="grid">
             <?php
-                include("php/conexion/casper.php");
                 $leer = "SELECT * FROM maquinarias";
                 $query = $conexion->query($leer);
 
@@ -183,7 +191,7 @@
                         <form action="php/maquinarias/eliminarMaquinaria.php" method="post" autocomplete="off">
                             <div class="tarjeta">
                                 <div class="tarjetaImagen">
-                                    <img src="" alt="Example">
+                                    <img src="https://img.europapress.es/fotoweb/fotonoticia_20200131140923_420.jpg" alt="Example">
                                 </div>
                                 <div class="tarjetaCuerpo">
                                     <p class="tarjetaTitulo">$datos[1]</p>
