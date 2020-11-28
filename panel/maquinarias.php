@@ -88,7 +88,6 @@
         <h3>Entradas guardadas</h3>
 
         <div class="grid">
-
             <?php
                 include("php/conexion/casper.php");
                 $leer = "SELECT * FROM maquinarias";
@@ -171,6 +170,53 @@
 
     <section id="panelEliminar" class="ocultar">
         <h3>Selecciona la entrada que deseas eliminar</h3>
+
+        <div class="grid">
+            <?php
+                include("php/conexion/casper.php");
+                $leer = "SELECT * FROM maquinarias";
+                $query = $conexion->query($leer);
+
+                if ($query == true) {
+                    while ($datos = mysqli_fetch_array($query)) {
+                        echo <<<END
+                        <form action="php/maquinarias/eliminarMaquinaria.php" method="post" autocomplete="off">
+                            <div class="tarjeta">
+                                <div class="tarjetaImagen">
+                                    <img src="" alt="Example">
+                                </div>
+                                <div class="tarjetaCuerpo">
+                                    <p class="tarjetaTitulo">$datos[1]</p>
+                                    <p class="tarjetaSubtitulo">Modelo</p>
+                                    <p class="tarjetaTexto">$datos[3]</p>
+                                    <p class="tarjetaSubtitulo">Marca</p>
+                                    <p class="tarjetaTexto">$datos[2]</p>
+                                    <p class="tarjetaSubtitulo">Descripción</p>
+                                    <p class="tarjetaTexto">$datos[4]</p>
+                                    <p class="tarjetaSubtitulo">Estatus</p>
+                        END;
+                        if ($datos[5] == 1) {
+                            echo '<p class="tarjetaTexto">Disponible</p>';
+                        }else {
+                            echo '<p class="tarjetaTexto">No disponible</p>';
+                        }
+                        echo <<<END
+                                    <p class="tarjetaSubtitulo">Número de serie</p>
+                                    <p class="tarjetaTexto">$datos[0]</p>
+                                </div>
+                                <div class="tarjetaBotonera">
+                                    <button type="submit" class="boton">Eliminar</button>
+                                </div>
+                            </div>
+                            <select class="ocultar" name="numeroSerie" id="$datos[0]">
+                                <option value="$datos[0]">$datos[0]</option>
+                            </select>
+                        </form>
+                        END;
+                    }
+                }
+            ?>
+        </div>
     </section>
 
     <script src="js/panel.js"></script> 

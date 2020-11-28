@@ -207,22 +207,28 @@ table{
     margin-top: 1em;
 }
 
-.botonera, .botoneraIzquierda{
+.botonera,
+.botoneraIzquierda{
     display: flex;
     justify-content: flex-start;
 }
 
-.botonera > .boton, .botoneraIzquierda > .boton{
+.botonera > .boton,
+.botoneraIzquierda > .boton{
     margin-right: 1em;
 }
 
-.botoneraDerecha, .formularioBotonera{
+.botoneraDerecha,
+.formularioBotonera,
+.tarjetaBotonera{
     display: flex;
     justify-content: flex-end;
 }
 
-.botoneraDerecha > .boton, .formularioBotonera > .boton{
-    margin-left: 1em;
+.botoneraDerecha > .boton,
+.formularioBotonera > .boton,
+.tarjetaBotonera > .boton{
+    margin-right: 1em;
 }
 
 .contenedor{
