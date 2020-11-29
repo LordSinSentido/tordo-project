@@ -39,7 +39,7 @@
                     <p>En este panel podrás ver, agregar, actualizar o eliminar los proyectos que aparecen en la página principal.</p>
                 </div>
                 <div class="toastBotonera">
-                    <a href="proyectos.html" class="boton">Abrir panel</a>
+                    <a href="proyectos.php" class="boton">Abrir panel</a>
                 </div>
             </div>
 

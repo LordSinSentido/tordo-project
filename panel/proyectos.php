@@ -90,7 +90,7 @@
                         echo <<<END
                         <div class="tarjeta">
                             <div class="tarjetaImagen">
-                                <img src="../inicio/img/proyectos/$datos[6]" alt="$datos[1] $datos[3] de la marca $datos[2]">
+                                <img src="../inicio/img/proyectos/" alt="">
                             </div>
                             <div class="tarjetaCuerpo">
                                 <p class="tarjetaSubtitulo">Titulo</p>
