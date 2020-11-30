@@ -27,20 +27,20 @@
         
         <section id="acciones">
             <div class="migas">
-                <a href="../../maquinarias.php" class="boton">&#10094;</a>
-                <h2>Panel de maquinarías > Actualización del registro</h2>
+                <a href="../../usuarios.php" class="boton">&#10094;</a>
+                <h2>Panel de usuarios > Actualización del registro</h2>
             </div>
         </section>
         
         <section>
-            <form action="actualizarMaquinaria.php" method="post" autocomplete="off">
-                <h3>Agregar nueva maquinaria</h3>
+            <form action="actualizarUsuarios.php" method="post" autocomplete="off">
+                <h3>Agregar nuevo usuarios</h3>
                 
                 <?php
                     include("../conexion/casper.php");
-                    $numeroSerie = $_POST['numeroSerie'];
+                    $correo = $_POST['correo'];
 
-                    $leer = "SELECT * FROM maquinarias WHERE numeroSerie = '$numeroSerie'";
+                    $leer = "SELECT * FROM usuarios WHERE correo = '$correo'";
                     $query = $conexion->query($leer);
 
                     

@@ -87,36 +87,22 @@
         <div class="grid">
             <?php
                 include("php/conexion/casper.php");
-                $leer = "SELECT * FROM maquinarias";
+                $leer = "SELECT * FROM usuarios";
                 $query = $conexion->query($leer);
 
                 if ($query == true) {
                     while ($datos = mysqli_fetch_array($query)) {
                         echo <<<END
                         <div class="tarjeta">
-                            <div class="tarjetaImagen">
-                                <img src="../inicio/img/maquinaria/$datos[6]" alt="$datos[1] $datos[3] de la marca $datos[2]">
-                            </div>
                             <div class="tarjetaCuerpo">
+                                <p class="tarjetaSubtitulo">Correo</p>
                                 <p class="tarjetaTitulo">$datos[1]</p>
-                                <p class="tarjetaSubtitulo">Modelo</p>
-                                <p class="tarjetaTexto">$datos[3]</p>
-                                <p class="tarjetaSubtitulo">Marca</p>
+                                <p class="tarjetaSubtitulo">Nombre</p>
                                 <p class="tarjetaTexto">$datos[2]</p>
-                                <p class="tarjetaSubtitulo">Descripción</p>
+                                <p class="tarjetaSubtitulo">Apellido</p>
+                                <p class="tarjetaTexto">$datos[3]</p>
+                                <p class="tarjetaSubtitulo">Rol</p>
                                 <p class="tarjetaTexto">$datos[4]</p>
-                                <p class="tarjetaSubtitulo">Estatus</p>
-                        END;
-                        if ($datos[5] == 1) {
-                            echo '<p class="tarjetaTexto">Disponible</p>';
-                        }else {
-                            echo '<p class="tarjetaTexto">No disponible</p>';
-                        }
-                        echo <<<END
-                                <p class="tarjetaSubtitulo">Número de serie</p>
-                                <p class="tarjetaTexto">$datos[0]</p>
-                            </div>
-                        </div>
                         END;
                     }
                 }
@@ -129,32 +115,24 @@
 
         <div class="grid">
             <?php
-                $leer = "SELECT * FROM maquinarias";
+                $leer = "SELECT * FROM usuarios";
                 $query = $conexion->query($leer);
 
                 if ($query == true) {
                     while ($datos = mysqli_fetch_array($query)) {
                         echo <<<END
-                        <form action="php/maquinarias/editarMaquinaria.php" method="post" autocomplete="off">
+                           <form action="php/usuarios/editarUsuarios.php" method="post" autocomplete="off">
                             <div class="tarjeta">
-                                <div class="tarjetaImagen">
-                                    <img src="../inicio/img/maquinaria/$datos[6]" alt="$datos[1] $datos[3] de la marca $datos[2]">
-                                </div>
                                 <div class="tarjetaCuerpo">
-                                    <p class="tarjetaTitulo">$datos[1]</p>
-                                    <p class="tarjetaSubtitulo">Modelo</p>
-                                    <p class="tarjetaTexto">$datos[3]</p>
-                                    <p class="tarjetaSubtitulo">Marca</p>
-                                    <p class="tarjetaTexto">$datos[2]</p>
-                                    <p class="tarjetaSubtitulo">Descripción</p>
-                                    <p class="tarjetaTexto">$datos[4]</p>
-                                    <p class="tarjetaSubtitulo">Estatus</p>
-                        END;
-                        if ($datos[5] == 1) {
-                            echo '<p class="tarjetaTexto">Disponible</p>';
-                        }else {
-                            echo '<p class="tarjetaTexto">No disponible</p>';
-                        }
+                                <p class="tarjetaSubtitulo">Correo</p>
+                                <p class="tarjetaTitulo">$datos[1]</p>
+                                <p class="tarjetaSubtitulo">Nombre</p>
+                                <p class="tarjetaTexto">$datos[2]</p>
+                                <p class="tarjetaSubtitulo">Apellido</p>
+                                <p class="tarjetaTexto">$datos[3]</p>
+                                <p class="tarjetaSubtitulo">Rol</p>
+                                <p class="tarjetaTexto">$datos[4]</p>
+                            END;
                         echo <<<END
                                     <p class="tarjetaSubtitulo">Número de serie</p>
                                     <p class="tarjetaTexto">$datos[0]</p>
@@ -179,33 +157,25 @@
 
         <div class="grid">
             <?php
-                $leer = "SELECT * FROM maquinarias";
+                $leer = "SELECT * FROM usuarios";
                 $query = $conexion->query($leer);
 
                 if ($query == true) {
                     while ($datos = mysqli_fetch_array($query)) {
                         echo <<<END
-                        <form action="php/maquinarias/eliminarMaquinaria.php" method="post" autocomplete="off">
+                        <form action="php/usuarios/eliminarUsuarios.php" method="post" autocomplete="off">
                             <div class="tarjeta">
-                                <div class="tarjetaImagen">
-                                    <img src="../inicio/img/maquinaria/$datos[6]" alt="$datos[1] $datos[3] de la marca $datos[2]">
-                                </div>
                                 <div class="tarjetaCuerpo">
-                                    <p class="tarjetaTitulo">$datos[1]</p>
-                                    <p class="tarjetaSubtitulo">Modelo</p>
-                                    <p class="tarjetaTexto">$datos[3]</p>
-                                    <p class="tarjetaSubtitulo">Marca</p>
-                                    <p class="tarjetaTexto">$datos[2]</p>
-                                    <p class="tarjetaSubtitulo">Descripción</p>
-                                    <p class="tarjetaTexto">$datos[4]</p>
-                                    <p class="tarjetaSubtitulo">Estatus</p>
-                        END;
-                        if ($datos[5] == 1) {
-                            echo '<p class="tarjetaTexto">Disponible</p>';
-                        }else {
-                            echo '<p class="tarjetaTexto">No disponible</p>';
-                        }
-                        echo <<<END
+                                <p class="tarjetaSubtitulo">Correo</p>
+                                <p class="tarjetaTitulo">$datos[1]</p>
+                                <p class="tarjetaSubtitulo">Nombre</p>
+                                <p class="tarjetaTexto">$datos[2]</p>
+                                <p class="tarjetaSubtitulo">Apellido</p>
+                                <p class="tarjetaTexto">$datos[3]</p>
+                                <p class="tarjetaSubtitulo">Rol</p>
+                                <p class="tarjetaTexto">$datos[4]</p>
+                            END;
+                        <<<END
                                     <p class="tarjetaSubtitulo">Número de serie</p>
                                     <p class="tarjetaTexto">$datos[0]</p>
                                 </div>
