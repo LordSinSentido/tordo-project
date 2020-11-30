@@ -46,17 +46,17 @@
 
             <div class="formularioElemento">
                 <label for="Titulo">Título</label>
-                <input type="text" name="titulo" id="titulo" placeholder="Título del proyecto.">
+                <input type="text" name="titulo" id="titulo" placeholder="Título del proyecto." required>
             </div>        
 
             <div class="formularioElemento">
                 <label for="Lugar">Lugar</label>
                 <input type="text" name="lugar" id="lugar" placeholder="Lugar donde se realizará el proyecto.">
-            </div>        
+            </div>
 
             <div class="formularioElemento">
                 <label for="Descripcion">Descripción</label>
-                <textarea name="descripcion" id="descripcion" placeholder="Descripción del proyecto."></textarea>
+                <textarea name="descripcion" id="descripcion" placeholder="Descripción del proyecto." required></textarea>
             </div>        
 
             <div class="formularioElemento">
@@ -65,8 +65,23 @@
             </div>
 
             <div class="formularioElemento">
-                <label for="Fecha">Fecha</label>
-                <input type="date" name="fecha" id="fecha" placeholder="Fecha de realización del proyecto.">
+                <label for="Fecha">Fecha de conclución</label>
+                <input type="date" name="fecha" id="fecha" placeholder="Fecha de realización del proyecto." required>
+            </div>
+
+            <div class="formularioElemento">
+                <label for="imagen">Subir imagen 1</label>
+                <input type="file" name="imagen1" id="imagen1" required>
+            </div>
+
+            <div class="formularioElemento">
+                <label for="imagen">Subir imagen 2</label>
+                <input type="file" name="imagen2" id="imagen2">
+            </div>
+            
+            <div class="formularioElemento">
+                <label for="imagen">Subir imagen 3</label>
+                <input type="file" name="imagen3" id="imagen3">
             </div>
 
             <div class="formularioBotonera">
@@ -90,7 +105,7 @@
                         echo <<<END
                         <div class="tarjeta">
                             <div class="tarjetaImagen">
-                                <img src="../inicio/img/proyectos/$datos[6]" alt="$datos[1] $datos[3] de la marca $datos[2]">
+                                <img src="../inicio/img/proyectos/$datos[7]" alt="Imagen no disponible.">
                             </div>
                             <div class="tarjetaCuerpo">
                                 <p class="tarjetaSubtitulo">Titulo</p>

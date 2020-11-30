@@ -39,7 +39,7 @@
                     <p>En este panel podrás ver, agregar, actualizar o eliminar los proyectos que aparecen en la página principal.</p>
                 </div>
                 <div class="toastBotonera">
-                    <a href="proyectos.html" class="boton">Abrir panel</a>
+                    <a href="proyectos.php" class="boton">Abrir panel</a>
                 </div>
             </div>
 
@@ -78,7 +78,7 @@
                     <p>Desde aquí podrás crear, ver, editar o eliminar ofertas de trabajo que aparecen en la página principal.</p>
                 </div>
                 <div class="toastBotonera">
-                    <a href="bolsaDeTrabajo.html" class="boton">Abrir panel</a>
+                    <a href="bolsaDeTrabajo.php" class="boton">Abrir panel</a>
                 </div>
             </div>
 
@@ -91,7 +91,7 @@
                     <p>Aquí podrás dar de alta o baja a usuarios, así como conceder o revocar accesos a los paneles.</p>
                 </div>
                 <div class="toastBotonera">
-                    <a href="usuarios.html" class="boton">Abrir panel</a>
+                    <a href="usuarios.php" class="boton">Abrir panel</a>
                 </div>
             </div>
         </div>
