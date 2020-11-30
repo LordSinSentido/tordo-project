@@ -293,42 +293,42 @@ li > a{
 }
 
 #inicio{
-    background: linear-gradient(rgba(64, 47, 116, 0.7),rgba(64, 47, 116, 0.7)), url(../../img/index/header.webp);
+    background: linear-gradient(rgba(64, 47, 116, 0.7),rgba(64, 47, 116, 0.7)), url(../img/index/header.webp);
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
 }
 
 #servicios{
-    background: linear-gradient(rgba(64, 47, 116, 0.7),rgba(64, 47, 116, 0.7)), url(../../img/servicios/fondo.webp);
+    background: linear-gradient(rgba(64, 47, 116, 0.7),rgba(64, 47, 116, 0.7)), url(../img/servicios/fondo.webp);
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
 }
 
 #proyectos{
-    background: linear-gradient(rgba(64, 47, 116, 0.7),rgba(64, 47, 116, 0.7)), url(../../img/proyectos/fondo.webp);
+    background: linear-gradient(rgba(64, 47, 116, 0.7),rgba(64, 47, 116, 0.7)), url(../img/proyectos/fondo.webp);
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
 }
 
 #maquinaria{
-    background: linear-gradient(rgba(64, 47, 116, 0.7),rgba(64, 47, 116, 0.7)), url(../../img/maquinaria/fondo.webp);
+    background: linear-gradient(rgba(64, 47, 116, 0.7),rgba(64, 47, 116, 0.7)), url(../img/maquinaria/fondo.webp);
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
 }
 
 #bolsa{
-    background: linear-gradient(rgba(64, 47, 116, 0.7),rgba(64, 47, 116, 0.7)), url(../../img/bolsa/fondo.webp);
+    background: linear-gradient(rgba(64, 47, 116, 0.7),rgba(64, 47, 116, 0.7)), url(../img/bolsa/fondo.webp);
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
 }
 
 #contacto{
-    background: linear-gradient(rgba(64, 47, 116, 0.7),rgba(64, 47, 116, 0.7)), url(../../img/contacto/fondo.webp);
+    background: linear-gradient(rgba(64, 47, 116, 0.7),rgba(64, 47, 116, 0.7)), url(../img/contacto/fondo.webp);
     background-position: center;
     background-size: cover;
     background-attachment: fixed;

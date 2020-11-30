@@ -8,6 +8,7 @@
     $descripcion = $_POST['descripcion'];
     $estatus = $_POST['estatus'];
 
+    //  Codigo de imagen
     $imagen = $_FILES['imagen']['name'];
     $binario = $_FILES['imagen']['tmp_name'];
     $ruta = "../../../inicio/img/maquinaria";

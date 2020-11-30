@@ -387,7 +387,6 @@ button{
 
     .grid{
         grid-template-columns: 1fr 1fr;
-        width: fit-content;
     }
     
     .logotipo{

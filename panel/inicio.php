@@ -65,7 +65,7 @@
                     <p>Aquí podras ver y agregar clinetes que hayan rentado maquinaría.</p>
                 </div>
                 <div class="toastBotonera">
-                    <a href="link" class="boton">Abrir panel</a>
+                    <a href="clientes.php" class="boton">Abrir panel</a>
                 </div>
             </div>
 

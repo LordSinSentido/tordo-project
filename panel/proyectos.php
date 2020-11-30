@@ -105,7 +105,11 @@
                         echo <<<END
                         <div class="tarjeta">
                             <div class="tarjetaImagen">
+<<<<<<< HEAD
                                 <img src="../inicio/img/proyectos/$datos[7]" alt="Imagen no disponible.">
+=======
+                                <img src="../inicio/img/proyectos/" alt="">
+>>>>>>> 85edd322643dc00293bf36c2f64f4437de9eb169
                             </div>
                             <div class="tarjetaCuerpo">
                                 <p class="tarjetaSubtitulo">Titulo</p>
