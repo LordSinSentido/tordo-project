@@ -32,10 +32,10 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
   `correo` text NOT NULL,
   `nombre` text NOT NULL,
   `apellido` text NOT NULL,
-  `contrasenna` text CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `contrasenna` text NOT NULL,
   `rol` int NOT NULL,
   PRIMARY KEY (`correo`(100))
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM;
 
 --
 -- Volcado de datos para la tabla `usuarios`
