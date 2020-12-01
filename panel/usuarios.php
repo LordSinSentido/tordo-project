@@ -96,14 +96,16 @@
                         <div class="tarjeta">
                             <div class="tarjetaCuerpo">
                                 <p class="tarjetaSubtitulo">Correo</p>
-                                <p class="tarjetaTitulo">$datos[1]</p>
+                                <p class="tarjetaTitulo">$datos[0]</p>
                                 <p class="tarjetaSubtitulo">Nombre</p>
-                                <p class="tarjetaTexto">$datos[2]</p>
+                                <p class="tarjetaTexto">$datos[1]</p>
                                 <p class="tarjetaSubtitulo">Apellido</p>
-                                <p class="tarjetaTexto">$datos[3]</p>
+                                <p class="tarjetaTexto">$datos[2]</p>
                                 <p class="tarjetaSubtitulo">Rol</p>
                                 <p class="tarjetaTexto">$datos[4]</p>
-                        END;
+                            </div>
+                        </div>
+                    END;
                     }
                 }
             ?>
@@ -121,27 +123,23 @@
                 if ($query == true) {
                     while ($datos = mysqli_fetch_array($query)) {
                         echo <<<END
-                           <form action="php/usuarios/editarUsuarios.php" method="post" autocomplete="off">
+                            <form action="php/usuarios/editarUsuarios.php" method="post" autocomplete="off">
                             <div class="tarjeta">
                                 <div class="tarjetaCuerpo">
-                                <p class="tarjetaSubtitulo">Correo</p>
-                                <p class="tarjetaTitulo">$datos[1]</p>
-                                <p class="tarjetaSubtitulo">Nombre</p>
-                                <p class="tarjetaTexto">$datos[2]</p>
-                                <p class="tarjetaSubtitulo">Apellido</p>
-                                <p class="tarjetaTexto">$datos[3]</p>
-                                <p class="tarjetaSubtitulo">Rol</p>
-                                <p class="tarjetaTexto">$datos[4]</p>
-                            END;
-                        echo <<<END
-                                    <p class="tarjetaSubtitulo">Número de serie</p>
-                                    <p class="tarjetaTexto">$datos[0]</p>
+                                    <p class="tarjetaSubtitulo">Correo</p>
+                                    <p class="tarjetaTitulo">$datos[0]</p>
+                                    <p class="tarjetaSubtitulo">Nombre</p>
+                                    <p class="tarjetaTexto">$datos[1]</p>
+                                    <p class="tarjetaSubtitulo">Apellido</p>
+                                    <p class="tarjetaTexto">$datos[2]</p>
+                                    <p class="tarjetaSubtitulo">Rol</p>
+                                    <p class="tarjetaTexto">$datos[4]</p>
                                 </div>
                                 <div class="tarjetaBotonera">
                                     <button type="submit" class="boton">Actualizar</button>
                                 </div>
                             </div>
-                            <select class="ocultar" name="numeroSerie" id="$datos[0]">
+                            <select class="ocultar" name="correo" id="$datos[0]">
                                 <option value="$datos[0]">$datos[0]</option>
                             </select>
                         </form>
@@ -163,27 +161,23 @@
                 if ($query == true) {
                     while ($datos = mysqli_fetch_array($query)) {
                         echo <<<END
-                        <form action="php/usuarios/eliminarUsuarios.php" method="post" autocomplete="off">
+                            <form action="php/usuarios/eliminarUsuarios.php" method="post" autocomplete="off">
                             <div class="tarjeta">
                                 <div class="tarjetaCuerpo">
-                                <p class="tarjetaSubtitulo">Correo</p>
-                                <p class="tarjetaTitulo">$datos[1]</p>
-                                <p class="tarjetaSubtitulo">Nombre</p>
-                                <p class="tarjetaTexto">$datos[2]</p>
-                                <p class="tarjetaSubtitulo">Apellido</p>
-                                <p class="tarjetaTexto">$datos[3]</p>
-                                <p class="tarjetaSubtitulo">Rol</p>
-                                <p class="tarjetaTexto">$datos[4]</p>
-                            END;
-                        <<<END
-                                    <p class="tarjetaSubtitulo">Número de serie</p>
-                                    <p class="tarjetaTexto">$datos[0]</p>
+                                    <p class="tarjetaSubtitulo">Correo</p>
+                                    <p class="tarjetaTitulo">$datos[0]</p>
+                                    <p class="tarjetaSubtitulo">Nombre</p>
+                                    <p class="tarjetaTexto">$datos[1]</p>
+                                    <p class="tarjetaSubtitulo">Apellido</p>
+                                    <p class="tarjetaTexto">$datos[2]</p>
+                                    <p class="tarjetaSubtitulo">Rol</p>
+                                    <p class="tarjetaTexto">$datos[4]</p>
                                 </div>
                                 <div class="tarjetaBotonera">
                                     <button type="submit" class="boton">Eliminar</button>
                                 </div>
                             </div>
-                            <select class="ocultar" name="numeroSerie" id="$datos[0]">
+                            <select class="ocultar" name="correo" id="$datos[0]">
                                 <option value="$datos[0]">$datos[0]</option>
                             </select>
                         </form>

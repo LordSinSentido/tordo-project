@@ -47,57 +47,65 @@
                     if ($query == true) {
                         while ($datos = mysqli_fetch_array($query)) {
                             echo <<<END
-
                             <div class="formularioElemento">
-                                <label for="tipo">Tipo de maquinaría</label>
-                                <input type="text" name="tipo" id="tipo" placeholder="Motoconformadora" value="$datos[1]">
+                                <label for="correo">Correo</label>
+                                <input type="text" name="correo" id="correo" placeholder="usuario@correo.com" value="$datos[0]" readonly>
                             </div>
-
                             <div class="formularioElemento">
-                                <label for="modelo">Modelo de la maquinaría</label>
-                                <input type="text" name="modelo" id="modelo" placeholder="140 M" value="$datos[3]">
+                                <label for="nombre">Nombre</label>
+                                <input type="text" name="nombre" id="nombre" placeholder="Nombre" value="$datos[1]">
                             </div>
-
                             <div class="formularioElemento">
-                                <label for="marca">Marca de la maquinaría</label>
-                                <input type="text" name="marca" id="marca" placeholder="Caterpillar" value="$datos[2]">
+                                <label for="apellido">Apellido</label>
+                                <input type="text" name="apellido" id="apellido" placeholder="Apellido" value="$datos[2]">
                             </div>
-
                             <div class="formularioElemento">
-                                <label for="descripcion">Descripción de la maquinaría</label>
-                                <textarea name="descripcion" id="descripcion" placeholder="La maquína está en buen estado...">$datos[4]</textarea>
+                                <label for="contrasenna">Contraseña</label>
+                                <input type="password" name="contrasenna" id="contrasenna" placeholder="*********" value="$datos[3]">
                             </div>
-
                             <div class="formularioElemento">
-                                <label for="numeroSerie">Número de serie de la maquinaría (Solo lectura)</label>
-                                <input type="text" name="numeroSerie" id="numeroSerie" placeholder="CAD0000XXXXX00000X" value="$datos[0]" readonly>
-                            </div>
-
-                            <div class="formularioElemento">
-                                <label for="estatus">Estatus de la maquina</label>
-                                <select name="estatus" id="estatus" value="$datos[5]">
+                                <label for="rol">Rol</label>
+                                <select name="rol" id="rol" value="$datos[4]">
                             END;
 
-                            switch ($datos[5]) {
-                                case '1':
+                            switch ($datos[4]) {
+                                    case '0':
                                     echo <<<END
-                                        <option value="1" selected>Disponible</option>
-                                        <option value="0">No disponible</option>
+                                        <option value="0" selected>Administrador</option>
+                                        <option value="1">Moderador</option>
+                                        <option value="2">Recursos Humanos</option>
+                                        <option value="3">Publicador</option>
                                     END;
                                     break;
-
-                                    case '0':
-                                        echo <<<END
-                                            <option value="1">Disponible</option>
-                                            <option value="0" selected>No disponible</option>
-                                        END;
-                                        break;
+                                    case '1':
+                                    echo <<<END
+                                        <option value="0">Administrador</option>
+                                        <option value="1" selected>Moderador</option>
+                                        <option value="2">Recursos Humanos</option>
+                                        <option value="3">Publicador</option>
+                                    END;
+                                    break;
+                                    case '2':
+                                    echo <<<END
+                                        <option value="0">Administrador</option>
+                                        <option value="1">Moderador</option>
+                                        <option value="2" selected>Recursos Humanos</option>
+                                        <option value="3">Publicador</option>
+                                    END;
+                                    break;
+                                    case '3':
+                                    echo <<<END
+                                        <option value="0" selected>Administrador</option>
+                                        <option value="1">Moderador</option>
+                                        <option value="2">Recursos Humanos</option>
+                                        <option value="3" selected>Publicador</option>
+                                    END;
+                                    break;
                             }
 
                             echo <<<END
                                 </select>
                             </div>
-
                             <div class="formularioBotonera">
                                 <button type="submit" class="boton">Actualizar</button>
                             </div>

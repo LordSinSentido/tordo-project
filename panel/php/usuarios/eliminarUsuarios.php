@@ -3,7 +3,7 @@
     
     $correo = $_POST['correo'];
 
-    $eliminar = "DELETE FROM usuarios WHERE corrreo = '$correo'";
+    $eliminar = "DELETE FROM usuarios WHERE correo = '$correo'";
 
     if ($conexion->query($eliminar) == true) {
         echo <<<END

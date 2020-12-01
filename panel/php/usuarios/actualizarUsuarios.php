@@ -2,7 +2,7 @@
    include("../conexion/melchior.php");
 
     $correo = $_POST['correo'];
-    $nombre = $_POST['nomre'];
+    $nombre = $_POST['nombre'];
     $apellido = $_POST['apellido'];
     $contrasenna = $_POST['contrasenna'];
     $rol = $_POST['rol'];

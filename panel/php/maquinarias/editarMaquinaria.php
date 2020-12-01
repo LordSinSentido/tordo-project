@@ -47,7 +47,6 @@
                     if ($query == true) {
                         while ($datos = mysqli_fetch_array($query)) {
                             echo <<<END
-
                             <div class="formularioElemento">
                                 <label for="tipo">Tipo de maquinaría</label>
                                 <input type="text" name="tipo" id="tipo" placeholder="Motoconformadora" value="$datos[1]">
