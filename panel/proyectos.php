@@ -45,42 +45,42 @@
             <h3>Agregar nuevo proyecto</h3>
 
             <div class="formularioElemento">
-                <label for="Titulo">Título</label>
+                <label for="titulo">Título</label>
                 <input type="text" name="titulo" id="titulo" placeholder="Título del proyecto." required>
             </div>        
 
             <div class="formularioElemento">
-                <label for="Lugar">Lugar</label>
+                <label for="lugar">Lugar</label>
                 <input type="text" name="lugar" id="lugar" placeholder="Lugar donde se realizará el proyecto.">
             </div>
 
             <div class="formularioElemento">
-                <label for="Descripcion">Descripción</label>
+                <label for="descripcion">Descripción</label>
                 <textarea name="descripcion" id="descripcion" placeholder="Descripción del proyecto." required></textarea>
             </div>        
 
             <div class="formularioElemento">
-                <label for="Alcance">Alcance</label>
+                <label for="alcance">Alcance</label>
                 <textarea name="alcance" id="alcance" placeholder="Alcance del proyecto."></textarea>
             </div>
 
             <div class="formularioElemento">
-                <label for="Fecha">Fecha de conclución</label>
+                <label for="fecha">Fecha de conclución</label>
                 <input type="date" name="fecha" id="fecha" placeholder="Fecha de realización del proyecto." required>
             </div>
 
             <div class="formularioElemento">
-                <label for="imagen">Subir imagen 1</label>
+                <label for="imagen1">Subir imagen 1</label>
                 <input type="file" name="imagen1" id="imagen1" required>
             </div>
 
             <div class="formularioElemento">
-                <label for="imagen">Subir imagen 2</label>
+                <label for="imagen2">Subir imagen 2</label>
                 <input type="file" name="imagen2" id="imagen2">
             </div>
             
             <div class="formularioElemento">
-                <label for="imagen">Subir imagen 3</label>
+                <label for="imagen3">Subir imagen 3</label>
                 <input type="file" name="imagen3" id="imagen3">
             </div>
 
@@ -105,11 +105,7 @@
                         echo <<<END
                         <div class="tarjeta">
                             <div class="tarjetaImagen">
-<<<<<<< HEAD
                                 <img src="../inicio/img/proyectos/$datos[7]" alt="Imagen no disponible.">
-=======
-                                <img src="../inicio/img/proyectos/" alt="">
->>>>>>> 85edd322643dc00293bf36c2f64f4437de9eb169
                             </div>
                             <div class="tarjetaCuerpo">
                                 <p class="tarjetaSubtitulo">Titulo</p>
