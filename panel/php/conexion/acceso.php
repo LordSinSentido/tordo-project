@@ -19,10 +19,10 @@
             session_start();
             header("Location: ../../inicio.php");
         }else {
-            echo 'La contraseña no es correcta';
+            header("Location: ../../index.php");
         }
     }else {
-        echo 'Ususario inexistente';
+        header("Location: ../../index.php");
     }
 
     $conexion->close();
