@@ -17,6 +17,10 @@
             $datos = "SELECT nombre, apellido, correo FROM usuarios WHERE correo = '$correo' AND contrasenna = '$contrasenna'";
             $usuario = $conexion->query($datos);
             session_start();
+            $_SESSION["estado"] = 1;
+            $_SESSION["nombre"] = $datos[0];
+            $_SESSION["apellido"] = $datos[1];
+            $_SESSION["correo"] = $datos[2];
             header("Location: ../../inicio.php");
         }else {
             header("Location: ../../index.php");

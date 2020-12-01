@@ -1,3 +1,6 @@
+<?php
+    include("php/conexion/seguridad.php");
+?>
 <!DOCTYPE html>
 <html lang="es-MX">
 <head>
