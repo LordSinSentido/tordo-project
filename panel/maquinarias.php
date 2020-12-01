@@ -41,7 +41,7 @@
     </section>
 
     <section id="panelAgregar" class="ocultar">
-        <form action="php/proyectos/agregarProyecto.php" method="post" autocomplete="off" enctype="multipart/form-data">
+        <form action="php/maquinarias/agregarMaquinaria.php" method="post" autocomplete="off" enctype="multipart/form-data">
             <h3>Agregar nuevo proyecto</h3>
 
             <div class="formularioElemento">
