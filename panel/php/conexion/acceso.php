@@ -5,16 +5,25 @@
     $contrasenna = $_POST['contrasenna'];
 
     $ver = "SELECT correo FROM usuarios WHERE correo = '$correo'";
-    $buscar = $conexion->query($buscar);
+    $buscar = $conexion->query($ver);
     $encontrar = mysqli_num_rows($buscar);
 
     if ($encontrar == 1) {
-        $ver = "SELECT email FROM usuarios WHERE correo = '$correo' AND contrasenna = '$contrasenna'";
+        $ver = "SELECT correo FROM usuarios WHERE correo = '".$correo."' AND contrasenna = '".$contrasenna."'";
         $buscar = $conexion->query($ver);
         $encontrar = mysqli_num_rows($buscar);
 
         if ($encontrar == 1) {
-            echo
+            $datos = "SELECT nombre, apellido, correo FROM usuarios WHERE correo = '$correo' AND contrasenna = '$contrasenna'";
+            $usuario = $conexion->query($datos);
+            session_start();
+            header("Location: ../../inicio.php");
+        }else {
+            echo 'La contraseña no es correcta';
         }
+    }else {
+        echo 'Ususario inexistente';
     }
+
+    $conexion->close();
 ?>

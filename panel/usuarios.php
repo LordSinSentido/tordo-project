@@ -121,7 +121,7 @@
                 if ($query == true) {
                     while ($datos = mysqli_fetch_array($query)) {
                         echo <<<END
-                           <form action="php/usuarios/editarUsuarios.php" method="post" autocomplete="off">
+                            <form action="php/usuarios/editarUsuarios.php" method="post" autocomplete="off">
                             <div class="tarjeta">
                                 <div class="tarjetaCuerpo">
                                 <p class="tarjetaSubtitulo">Correo</p>
@@ -163,7 +163,7 @@
                 if ($query == true) {
                     while ($datos = mysqli_fetch_array($query)) {
                         echo <<<END
-                        <form action="php/usuarios/eliminarUsuarios.php" method="post" autocomplete="off">
+                            <form action="php/usuarios/eliminarUsuarios.php" method="post" autocomplete="off">
                             <div class="tarjeta">
                                 <div class="tarjetaCuerpo">
                                 <p class="tarjetaSubtitulo">Correo</p>
