@@ -44,27 +44,47 @@
     </section>
 
     <section id="panelAgregar" class="ocultar">
-        <form action="php/bolsaDeTrabajo/agregarBolsa.php" method="post" autocomplete="off" enctype="multipart/form-data">
+        <form action="php/clientes/agregarClientes.php" method="post" autocomplete="off" enctype="multipart/form-data">
             <h3>Agregar nuevo cliente</h3>
             
             <div class="formularioElemento">
-                <label for="puesto">Puesto</label>
-                <input type="text" name="puesto" id="puesto" placeholder="Contador" >
+                <label for="nombre">Nombre</label>
+                <input type="text" name="nombre" id="nombre" placeholder="María">
             </div>
 
             <div class="formularioElemento">
-                <label for="descripcion">Descripción</label>
-                <textarea name="descripcion" id="descripcion" placeholder="Se busca contador..."></textarea>
-            </div>        
-
-            <div class="formularioElemento">
-                <label for="requisitos">Requisitos</label>
-                <textarea name="requisitos" id="requisitos" placeholder="Los requisitos para este puesto son..."></textarea>
+                <label for="apellido">Apellido</label>
+                <input type="text" name="apellido" id="apellido" placeholder="Martínez">
             </div>
 
             <div class="formularioElemento">
-                <label for="sueldo">Sueldo y Prestaciones</label>
-                <textarea name="sueldo" id="sueldo" placeholder="Ofrecemos el siguiente sueldo y prestaciones..."></textarea>
+                <label for="curp">CURP</label>
+                <input type="text" name="curp" id="curp" placeholder="XXXX00000XXXXXX00">
+            </div>
+
+            <div class="formularioElemento">
+                <label for="direccion">Dirección</label>
+                <input type="text" name="direccion" id="direccion" placeholder="Fuelle #123 A">
+            </div>
+
+            <div class="formularioElemento">
+                <label for="correo">Correo</label>
+                <input type="email" name="correo" id="correo" placeholder="correo@ejemplo.com">
+            </div>
+
+            <div class="formularioElemento">
+                <label for="telefono">Teléfono</label>
+                <input type="text" name="telefono" id="telefono" placeholder="5513467982">
+            </div>
+
+            <div class="formularioElemento">
+                <label for="fecha">Fecha del servicio</label>
+                <input type="date" name="fecha" id="fecha">
+            </div>
+
+            <div class="formularioElemento">
+                <label for="rento">Maquinaria que rentó</label>
+                <input type="text" name="rento" id="rento" placeholder="CAD0000ASDFG00000X">
             </div>
 
             <div class="formularioBotonera">
@@ -80,7 +100,7 @@
         <div class="grid">
             <?php
                 include("php/conexion/casper.php");
-                $leer = "SELECT * FROM bolsatrabajo";
+                $leer = "SELECT * FROM clientes";
                 $query = $conexion->query($leer);
 
                 if ($query == true) {
@@ -88,13 +108,19 @@
                         echo <<<END
                         <div class="tarjeta">
                             <div class="tarjetaCuerpo">
-                                <p class="tarjetaTitulo">$datos[1]</p>
-                                <p class="tarjetaSubtitulo">Descripción</p>
-                                <p class="tarjetaTexto">$datos[2]</p>
-                                <p class="tarjetaSubtitulo">Requisitos</p>
+                                <p class="tarjetaTitulo">$datos[1] $datos[2]</p>
+                                <p class="tarjetaSubtitulo">CURP</p>
                                 <p class="tarjetaTexto">$datos[3]</p>
-                                <p class="tarjetaSubtitulo">Sueldo</p>
+                                <p class="tarjetaSubtitulo">Correo</p>
+                                <p class="tarjetaTexto">$datos[5]</p>
+                                <p class="tarjetaSubtitulo">Teléfono</p>
+                                <p class="tarjetaTexto">$datos[6]</p>
+                                <p class="tarjetaSubtitulo">Dirección</p>
                                 <p class="tarjetaTexto">$datos[4]</p>
+                                <p class="tarjetaSubtitulo">Fecha del servicio</p>
+                                <p class="tarjetaTexto">$datos[7]</p>
+                                <p class="tarjetaSubtitulo">Maquinaría rentada</p>
+                                <p class="tarjetaTexto">$datos[8]</p>
                             </div>
                         </div>
                         END;
@@ -109,22 +135,28 @@
 
         <div class="grid">
             <?php
-                $leer = "SELECT * FROM bolsatrabajo";
+                $leer = "SELECT * FROM clientes";
                 $query = $conexion->query($leer);
 
                 if ($query == true) {
                     while ($datos = mysqli_fetch_array($query)) {
                         echo <<<END
-                        <form action="php/bolsaDeTrabajo/editarBolsa.php" method="post" autocomplete="off">
+                        <form action="php/clientes/editarClientes.php" method="post" autocomplete="off">
                             <div class="tarjeta">
                                 <div class="tarjetaCuerpo">
-                                    <p class="tarjetaTitulo">$datos[1]</p>
-                                    <p class="tarjetaSubtitulo">Descripción</p>
-                                    <p class="tarjetaTexto">$datos[2]</p>
-                                    <p class="tarjetaSubtitulo">Requisitos</p>
+                                    <p class="tarjetaTitulo">$datos[1] $datos[2]</p>
+                                    <p class="tarjetaSubtitulo">CURP</p>
                                     <p class="tarjetaTexto">$datos[3]</p>
-                                    <p class="tarjetaSubtitulo">Sueldo</p>
+                                    <p class="tarjetaSubtitulo">Correo</p>
+                                    <p class="tarjetaTexto">$datos[5]</p>
+                                    <p class="tarjetaSubtitulo">Teléfono</p>
+                                    <p class="tarjetaTexto">$datos[6]</p>
+                                    <p class="tarjetaSubtitulo">Dirección</p>
                                     <p class="tarjetaTexto">$datos[4]</p>
+                                    <p class="tarjetaSubtitulo">Fecha del servicio</p>
+                                    <p class="tarjetaTexto">$datos[7]</p>
+                                    <p class="tarjetaSubtitulo">Maquinaría rentada</p>
+                                    <p class="tarjetaTexto">$datos[8]</p>
                                 </div>
                                 <div class="tarjetaBotonera">
                                     <button type="submit" class="boton">Actualizar</button>
@@ -146,22 +178,28 @@
 
         <div class="grid">
             <?php
-                $leer = "SELECT * FROM bolsatrabajo";
+                $leer = "SELECT * FROM clientes";
                 $query = $conexion->query($leer);
 
                 if ($query == true) {
                     while ($datos = mysqli_fetch_array($query)) {
                         echo <<<END
-                        <form action="php/bolsaDeTrabajo/eliminarBolsa.php" method="post" autocomplete="off">
+                        <form action="php/clientes/eliminarClientes.php" method="post" autocomplete="off">
                             <div class="tarjeta">
                                 <div class="tarjetaCuerpo">
-                                   <p class="tarjetaTitulo">$datos[1]</p>
-                                    <p class="tarjetaSubtitulo">Descripción</p>
-                                    <p class="tarjetaTexto">$datos[2]</p>
-                                    <p class="tarjetaSubtitulo">Requisitos</p>
+                                    <p class="tarjetaTitulo">$datos[1] $datos[2]</p>
+                                    <p class="tarjetaSubtitulo">CURP</p>
                                     <p class="tarjetaTexto">$datos[3]</p>
-                                    <p class="tarjetaSubtitulo">Sueldo</p>
+                                    <p class="tarjetaSubtitulo">Correo</p>
+                                    <p class="tarjetaTexto">$datos[5]</p>
+                                    <p class="tarjetaSubtitulo">Teléfono</p>
+                                    <p class="tarjetaTexto">$datos[6]</p>
+                                    <p class="tarjetaSubtitulo">Dirección</p>
                                     <p class="tarjetaTexto">$datos[4]</p>
+                                    <p class="tarjetaSubtitulo">Fecha del servicio</p>
+                                    <p class="tarjetaTexto">$datos[7]</p>
+                                    <p class="tarjetaSubtitulo">Maquinaría rentada</p>
+                                    <p class="tarjetaTexto">$datos[8]</p>
                                 </div>
                                 <div class="tarjetaBotonera">
                                     <button type="submit" class="boton">Eliminar</button>

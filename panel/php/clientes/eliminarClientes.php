@@ -3,33 +3,21 @@
     
     $id = $_POST['id'];
 
-    $tomarImagen = "SELECT imagen1 FROM proyectos WHERE id = $id";
-    $query = $conexion->query($tomarImagen);
-    $nombre = mysqli_fetch_array($query);
-
-    $ruta = "../../../inicio/img/proyectos";
-    $ruta = $ruta . '/' . $nombre[0];
-    unlink($ruta);
-
-    $eliminar = "DELETE FROM proyectos WHERE id = '$id'";
+    $eliminar = "DELETE FROM clientes WHERE id = $id";
 
     if ($conexion->query($eliminar) == true) {
         echo <<<END
-
         <script languaje='javascript'>
             alert('El registro fue eliminado exitosamente.');
-            window.location.href="../../proyectos.php";
+            window.location.href="../../clientes.php";
         </script>
-            
         END;
     }else{
         echo <<<END
-
         <script languaje='javascript'>
             alert('Hubo un problema, comuniquese con el administrador.');
-            window.location.href="../../proyectos.php";
+            window.location.href="../../clientes.php";
         </script>
-            
         END;
     }
 
