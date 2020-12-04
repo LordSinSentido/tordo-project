@@ -30,20 +30,20 @@
         
         <section id="acciones">
             <div class="migas">
-                <a href="../../usuarios.php" class="boton">&#10094;</a>
+                <a href="../../clientes.php" class="boton">&#10094;</a>
                 <h2>Panel de usuarios > Actualización del registro</h2>
             </div>
         </section>
         
         <section>
-            <form action="actualizarUsuarios.php" method="post" autocomplete="off">
+            <form action="actualizarClientes.php" method="post" autocomplete="off">
                 <h3>Agregar nuevo usuarios</h3>
                 
                 <?php
                     include("../conexion/casper.php");
-                    $correo = $_POST['correo'];
+                    $id = $_POST['id'];
 
-                    $leer = "SELECT * FROM usuarios WHERE correo = '$correo'";
+                    $leer = "SELECT * FROM clientes WHERE id = $id";
                     $query = $conexion->query($leer);
 
                     
@@ -51,64 +51,50 @@
                         while ($datos = mysqli_fetch_array($query)) {
                             echo <<<END
                             <div class="formularioElemento">
-                                <label for="correo">Correo</label>
-                                <input type="text" name="correo" id="correo" placeholder="usuario@correo.com" value="$datos[0]" readonly>
-                            </div>
-                            <div class="formularioElemento">
                                 <label for="nombre">Nombre</label>
-                                <input type="text" name="nombre" id="nombre" placeholder="Nombre" value="$datos[1]">
+                                <input type="text" name="nombre" id="nombre" placeholder="María" value='$datos[1]'>
                             </div>
+
                             <div class="formularioElemento">
                                 <label for="apellido">Apellido</label>
-                                <input type="text" name="apellido" id="apellido" placeholder="Apellido" value="$datos[2]">
+                                <input type="text" name="apellido" id="apellido" placeholder="Martínez" value='$datos[2]'>
                             </div>
-                            <div class="formularioElemento">
-                                <label for="contrasenna">Contraseña</label>
-                                <input type="password" name="contrasenna" id="contrasenna" placeholder="*********" value="$datos[3]">
-                            </div>
-                            <div class="formularioElemento">
-                                <label for="rol">Rol</label>
-                                <select name="rol" id="rol" value="$datos[4]">
-                            END;
 
-                            switch ($datos[4]) {
-                                    case '0':
-                                    echo <<<END
-                                        <option value="0" selected>Administrador</option>
-                                        <option value="1">Moderador</option>
-                                        <option value="2">Recursos Humanos</option>
-                                        <option value="3">Publicador</option>
-                                    END;
-                                    break;
-                                    case '1':
-                                    echo <<<END
-                                        <option value="0">Administrador</option>
-                                        <option value="1" selected>Moderador</option>
-                                        <option value="2">Recursos Humanos</option>
-                                        <option value="3">Publicador</option>
-                                    END;
-                                    break;
-                                    case '2':
-                                    echo <<<END
-                                        <option value="0">Administrador</option>
-                                        <option value="1">Moderador</option>
-                                        <option value="2" selected>Recursos Humanos</option>
-                                        <option value="3">Publicador</option>
-                                    END;
-                                    break;
-                                    case '3':
-                                    echo <<<END
-                                        <option value="0" selected>Administrador</option>
-                                        <option value="1">Moderador</option>
-                                        <option value="2">Recursos Humanos</option>
-                                        <option value="3" selected>Publicador</option>
-                                    END;
-                                    break;
-                            }
-
-                            echo <<<END
-                                </select>
+                            <div class="formularioElemento">
+                                <label for="curp">CURP</label>
+                                <input type="text" name="curp" id="curp" placeholder="XXXX00000XXXXXX00" value='$datos[3]'>
                             </div>
+
+                            <div class="formularioElemento">
+                                <label for="direccion">Dirección</label>
+                                <input type="text" name="direccion" id="direccion" placeholder="Fuelle #123 A" value='$datos[4]'>
+                            </div>
+
+                            <div class="formularioElemento">
+                                <label for="correo">Correo</label>
+                                <input type="email" name="correo" id="correo" placeholder="correo@ejemplo.com" value='$datos[5]'>
+                            </div>
+
+                            <div class="formularioElemento">
+                                <label for="telefono">Teléfono</label>
+                                <input type="text" name="telefono" id="telefono" placeholder="5513467982" value='$datos[6]'>
+                            </div>
+
+                            <div class="formularioElemento">
+                                <label for="fecha">Fecha del servicio</label>
+                                <input type="date" name="fecha" id="fecha" value='$datos[7]'>
+                            </div>
+
+                            <div class="formularioElemento">
+                                <label for="rento">Maquinaria que rentó</label>
+                                <input type="text" name="rento" id="rento" placeholder="CAD0000ASDFG00000X" value='$datos[8]'>
+                            </div>
+
+                            <div class="formularioElemento">
+                                <label for="id">Id</label>
+                                <input type="text" name="id" id="id" placeholder="$datos[0]" value='$datos[0]'>
+                            </div>
+
                             <div class="formularioBotonera">
                                 <button type="submit" class="boton">Actualizar</button>
                             </div>
