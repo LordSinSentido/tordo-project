@@ -100,7 +100,7 @@
         <div class="grid">
             <?php
                 include("php/conexion/casper.php");
-                $leer = "SELECT * FROM proyectos";
+                $leer = "SELECT * FROM proyectos ORDER BY fecha DESC";
                 $query = $conexion->query($leer);
 
                 if ($query == true) {
@@ -111,8 +111,7 @@
                                 <img src="../inicio/img/proyectos/$datos[6]" alt="$datos[1]">
                             </div>
                             <div class="tarjetaCuerpo">
-                                <p class="tarjetaSubtitulo">Titulo</p>
-                                <p class="tarjetaTexto">$datos[1]</p>
+                                <p class="tarjetaTitulo">$datos[1]</p>
                                 <p class="tarjetaSubtitulo">Lugar</p>
                                 <p class="tarjetaTexto">$datos[2]</p>
                                 <p class="tarjetaSubtitulo">Descripción</p>
@@ -135,7 +134,7 @@
 
         <div class="grid">
             <?php
-                $leer = "SELECT * FROM proyectos";
+                $leer = "SELECT * FROM proyectos ORDER BY fecha DESC";
                 $query = $conexion->query($leer);
 
                 if ($query == true) {
@@ -147,8 +146,7 @@
                                     <img src="../inicio/img/proyectos/$datos[6]" alt="Imagen no disponible.">
                                 </div>
                                 <div class="tarjetaCuerpo">
-                                    <p class="tarjetaSubtitulo">Titulo</p>
-                                    <p class="tarjetaTexto">$datos[1]</p>
+                                    <p class="tarjetaTitulo">$datos[1]</p>
                                     <p class="tarjetaSubtitulo">Lugar</p>
                                     <p class="tarjetaTexto">$datos[2]</p>
                                     <p class="tarjetaSubtitulo">Descripción</p>
@@ -178,7 +176,7 @@
 
         <div class="grid">
             <?php
-                $leer = "SELECT * FROM proyectos";
+                $leer = "SELECT * FROM proyectos ORDER BY fecha DESC";
                 $query = $conexion->query($leer);
 
                 if ($query == true) {
@@ -190,8 +188,7 @@
                                     <img src="../inicio/img/proyectos/$datos[6]" alt="Imagen no disponible.">
                                 </div>
                                 <div class="tarjetaCuerpo">
-                                    <p class="tarjetaSubtitulo">Titulo</p>
-                                    <p class="tarjetaTexto">$datos[1]</p>
+                                    <p class="tarjetaTitulo">$datos[1]</p>
                                     <p class="tarjetaSubtitulo">Lugar</p>
                                     <p class="tarjetaTexto">$datos[2]</p>
                                     <p class="tarjetaSubtitulo">Descripción</p>

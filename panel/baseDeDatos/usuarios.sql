@@ -33,7 +33,7 @@ CREATE TABLE `usuarios` (
   `apellido` text NOT NULL,
   `contrasenna` text NOT NULL,
   `rol` int(11) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `usuarios`

@@ -9,7 +9,6 @@
 
     $ruta = "../../../inicio/img/proyectos";
     $ruta = $ruta . '/' . $nombre[6];
-    echo "La ruta de la imagen 1 es: " . $ruta;
     unlink($ruta);
 
     $eliminar = "DELETE FROM proyectos WHERE id = '$id'";
