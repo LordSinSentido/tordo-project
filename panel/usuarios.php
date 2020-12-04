@@ -41,7 +41,7 @@
     </section>
 
     <section id="panelAgregar" class="ocultar">
-        <form action="php/usuarios/agregarUsuarios.php" method="post" autocomplete="off" enctype="multipart/form-data">
+        <form action="php/usuarios/agregarUsuarios.php" method="post" autocomplete="off">
             <h3>Agregar nuevo usuario</h3>
 
             <div class="formularioElemento">
@@ -69,7 +69,7 @@
                 <select name="rol" id="rol">
                     <option value="0">Administrador</option>
                     <option value="1">Moderador</option>
-                    <option value="2">Recursos Humanos</option>
+                    <option value="2">Recursos humanos</option>
                     <option value="3">Publicador</option>
                 </select>
             </div>
