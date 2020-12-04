@@ -1,3 +1,6 @@
+<?php
+    include("php/conexion/seguridad.php");
+?>
 <!DOCTYPE html>
 <html lang="es-MX">
 <head>
@@ -19,7 +22,7 @@
                 </div>
             </div>
             <nav>
-                <p id="usuario">annaGtrrz@tordotec.com</p>
+                <p id="usuario"><?php echo $_SESSION["correo"];?></p>
                 <a href="" class="boton">Cerrar sesión</a>
             </nav>
         </div>
@@ -45,11 +48,6 @@
             <h3>Agregar nuevo usuario</h3>
 
             <div class="formularioElemento">
-                <label for="correo">Correo</label>
-                <input type="email" name="correo" id="correo" placeholder="usuario@ejemplo.com">
-            </div>
-
-            <div class="formularioElemento">
                 <label for="nombre">Nombre</label>
                 <input type="text" name="nombre" id="nombre" placeholder="Nombre" >
             </div>
@@ -57,6 +55,11 @@
             <div class="formularioElemento">
                 <label for="apellido">Apellido</label>
                 <input type="text" name="apellido" id="apellido" placeholder="Apellido" >
+            </div>
+
+            <div class="formularioElemento">
+                <label for="correo">Correo</label>
+                <input type="email" name="correo" id="correo" placeholder="usuario@ejemplo.com">
             </div>
 
             <div class="formularioElemento">

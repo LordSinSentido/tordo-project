@@ -1,3 +1,6 @@
+<?php
+    include("php/conexion/seguridad.php");
+?>
 <!DOCTYPE html>
 <html lang="es-MX">
 <head>
@@ -19,7 +22,7 @@
                 </div>
             </div>
             <nav>
-                <p id="usuario">annaGtrrz@tordotec.com</p>
+                <p id="usuario"><?php echo $_SESSION["correo"];?></p>
                 <a href="" class="boton">Cerrar sesión</a>
             </nav>
         </div>

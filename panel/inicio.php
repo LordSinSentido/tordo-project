@@ -22,13 +22,13 @@
                 </div>
             </div>
             <nav>
-                <p id="usuario">annaGtrrz@tordotec.com</p>
+                <p id="usuario"><?php echo $_SESSION["correo"];?></p>
                 <a href="" class="boton">Cerrar sesión</a>
             </nav>
         </div>
     </header>
     <section>
-        <h2>Beinvenido Anna Gutierrez</h2>
+        <h2>Bienvenido <?php echo $_SESSION["nombre"];?> <?php echo $_SESSION["apellido"];?></h2>
         <p>Estos son los paneles a los que tienes acceso:</p>
     </section>
     <section>

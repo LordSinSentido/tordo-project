@@ -14,13 +14,16 @@
         $encontrar = mysqli_num_rows($buscar);
 
         if ($encontrar == 1) {
-            $datos = "SELECT nombre, apellido, correo FROM usuarios WHERE correo = '$correo' AND contrasenna = '$contrasenna'";
-            $usuario = $conexion->query($datos);
+            $leer = "SELECT * FROM usuarios WHERE correo = '".$correo."' AND contrasenna = '".$contrasenna."'";
+            $usuario = $conexion->query($leer);
+            $datos = mysqli_fetch_array($usuario);
             session_start();
+
             $_SESSION["estado"] = 1;
-            $_SESSION["nombre"] = $datos[0];
-            $_SESSION["apellido"] = $datos[1];
-            $_SESSION["correo"] = $datos[2];
+            $_SESSION["nombre"] = $datos[1];
+            $_SESSION["apellido"] = $datos[2];
+            $_SESSION["correo"] = $datos[0];
+
             header("Location: ../../inicio.php");
         }else {
             header("Location: ../../index.php");
