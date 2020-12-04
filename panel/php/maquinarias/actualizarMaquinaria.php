@@ -14,21 +14,17 @@
 
     if ($conexion->query($actualizar) == TRUE) {
         echo <<<END
-
         <script languaje='javascript'>
             alert('El registro fue actualizado exitosamente.');
             window.location.href="../../maquinarias.php";
         </script>
-
         END;
     }else{
         echo <<<END
-
         <script languaje='javascript'>
             alert('Hubo un problema, comuniquese con el administrador.');
             window.location.href="../../maquinarias.php";
         </script>
-
         END;
     }
 

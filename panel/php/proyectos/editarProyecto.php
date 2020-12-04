@@ -17,13 +17,13 @@
                 <div class="logotipo">
                     <img id="logo" src="../../img/icons/logo.svg" alt="Logotipo">
                     <div>
-                        <h1>Tordo tecnolog�as</h1>
-                        <p>M�dulo de administraci�n y gesti�n integral</p>
+                        <h1>Tordo tecnologías</h1>
+                        <p>Módulo de administración y gestión integral</p>
                     </div>
                 </div>
                 <nav>
-                    <p id="usuario">annaGtrrz@tordotec.com</p>
-                    <a href="../conexion/cerrar.php" class="boton">Cerrar sesi�n</a>
+                    <p id="usuario"><?php echo $_SESSION["correo"];?></p>
+                    <a href="../conexion/cerrar.php" class="boton">Cerrar sesión</a>
                 </nav>
             </div>
         </header>
@@ -31,7 +31,7 @@
         <section id="acciones">
             <div class="migas">
                 <a href="../../proyectos.php" class="boton">&#10094;</a>
-                <h2>Panel de proyectos > Actualizaci�n</h2>
+                <h2>Panel de proyectos > Actualización</h2>
             </div>
         </section>
         
@@ -52,18 +52,18 @@
                             echo <<<END
 
                                 <div class="formularioElemento">
-                                    <label for="Titulo">T�tulo</label>
-                                    <input type="text" name="titulo" id="titulo" placeholder="T�tulo del proyecto." value="$datos[1]">
+                                    <label for="Titulo">Título</label>
+                                    <input type="text" name="titulo" id="titulo" placeholder="Título del proyecto." value="$datos[1]">
                                 </div>        
 
                                 <div class="formularioElemento">
                                     <label for="Lugar">Lugar</label>
-                                    <input type="text" name="lugar" id="lugar" placeholder="Lugar donde se realizar� el proyecto." value="$datos[2]">
+                                    <input type="text" name="lugar" id="lugar" placeholder="Lugar donde se realizará el proyecto." value="$datos[2]">
                                 </div>
 
                                 <div class="formularioElemento">
-                                    <label for="Descripcion">Descripci�n</label>
-                                    <textarea name="descripcion" id="descripcion" placeholder="Descripci�n del proyecto."> $datos[3] </textarea>
+                                    <label for="Descripcion">Descripción</label>
+                                    <textarea name="descripcion" id="descripcion" placeholder="Descripción del proyecto."> $datos[3] </textarea>
                                 </div>        
 
                                 <div class="formularioElemento">
@@ -72,8 +72,8 @@
                                 </div>
 
                                 <div class="formularioElemento">
-                                    <label for="Fecha">Fecha de concluci�n</label>
-                                    <input type="date" name="fecha" id="fecha" placeholder="Fecha de realizaci�n del proyecto." value="$datos[5]">
+                                    <label for="Fecha">Fecha de conclución</label>
+                                    <input type="date" name="fecha" id="fecha" placeholder="Fecha de realización del proyecto." value="$datos[5]">
                                 </div>
 
                                 <div class="formularioElemento">

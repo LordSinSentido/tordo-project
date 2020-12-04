@@ -27,10 +27,20 @@
 
             header("Location: ../../inicio.php");
         }else {
-            header("Location: ../../index.php");
+            echo <<<END
+            <script languaje='javascript'>
+                alert('El usuario o la contraseña son incorrectos, intente nuevamente.');
+                window.location.href="../../index.php";
+            </script>
+            END;
         }
     }else {
-        header("Location: ../../index.php");
+        echo <<<END
+        <script languaje='javascript'>
+            alert('El usuario o la contraseña son incorrectos, intente nuevamente.');
+            window.location.href="../../index.php";
+        </script>
+        END;
     }
 
     $conexion->close();

@@ -22,7 +22,7 @@
                     </div>
                 </div>
                 <nav>
-                    <p id="usuario">annaGtrrz@tordotec.com</p>
+                    <p id="usuario"><?php echo $_SESSION["correo"];?></p>
                     <a href="../conexion/cerrar.php" class="boton">Cerrar sesión</a>
                 </nav>
             </div>
