@@ -23,7 +23,7 @@
             </div>
             <nav>
                 <p id="usuario"><?php echo $_SESSION["correo"];?></p>
-                <a href="" class="boton">Cerrar sesión</a>
+                <a href="php/conexion/cerrar.php" class="boton">Cerrar sesión</a>
             </nav>
         </div>
     </header>
@@ -98,12 +98,9 @@
                         echo <<<END
                         <div class="tarjeta">
                             <div class="tarjetaCuerpo">
+                                <p class="tarjetaTitulo">$datos[1] $datos[2]</p>
                                 <p class="tarjetaSubtitulo">Correo</p>
-                                <p class="tarjetaTitulo">$datos[0]</p>
-                                <p class="tarjetaSubtitulo">Nombre</p>
-                                <p class="tarjetaTexto">$datos[1]</p>
-                                <p class="tarjetaSubtitulo">Apellido</p>
-                                <p class="tarjetaTexto">$datos[2]</p>
+                                <p class="tarjetaTexto">$datos[0]</p>
                                 <p class="tarjetaSubtitulo">Rol</p>
                         END;
                         switch ($datos[4]) {
@@ -144,12 +141,9 @@
                             <form action="php/usuarios/editarUsuarios.php" method="post" autocomplete="off">
                             <div class="tarjeta">
                                 <div class="tarjetaCuerpo">
+                                    <p class="tarjetaTitulo">$datos[1] $datos[2]</p>
                                     <p class="tarjetaSubtitulo">Correo</p>
-                                    <p class="tarjetaTitulo">$datos[0]</p>
-                                    <p class="tarjetaSubtitulo">Nombre</p>
-                                    <p class="tarjetaTexto">$datos[1]</p>
-                                    <p class="tarjetaSubtitulo">Apellido</p>
-                                    <p class="tarjetaTexto">$datos[2]</p>
+                                    <p class="tarjetaTexto">$datos[0]</p>
                                     <p class="tarjetaSubtitulo">Rol</p>
                         END;
                         switch ($datos[4]) {
@@ -197,12 +191,9 @@
                             <form action="php/usuarios/eliminarUsuarios.php" method="post" autocomplete="off">
                             <div class="tarjeta">
                                 <div class="tarjetaCuerpo">
+                                    <p class="tarjetaTitulo">$datos[1] $datos[2]</p>
                                     <p class="tarjetaSubtitulo">Correo</p>
-                                    <p class="tarjetaTitulo">$datos[0]</p>
-                                    <p class="tarjetaSubtitulo">Nombre</p>
-                                    <p class="tarjetaTexto">$datos[1]</p>
-                                    <p class="tarjetaSubtitulo">Apellido</p>
-                                    <p class="tarjetaTexto">$datos[2]</p>
+                                    <p class="tarjetaTexto">$datos[0]</p>
                                     <p class="tarjetaSubtitulo">Rol</p>
                         END;
                         switch ($datos[4]) {

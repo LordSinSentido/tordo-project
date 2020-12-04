@@ -28,7 +28,7 @@
         </div>
     </header>
     <section>
-        <h2>Bienvenido <?php echo $_SESSION["nombre"];?> <?php echo $_SESSION["apellido"];?></h2>
+        <h2>¡Hola <?php echo $_SESSION["nombre"];?> <?php echo $_SESSION["apellido"];?>!</h2>
         <p>Estos son los paneles a los que tienes acceso:</p>
     </section>
     <section>
@@ -68,7 +68,7 @@
                 END;
             }
 
-            if ($_SESSION["rol"] == 0 || $_SESSION["rol"] == 1) {
+            if ($_SESSION["rol"] != 3) {
                 echo <<<END
                 <div class="toast">
                     <div class="toastIcono">

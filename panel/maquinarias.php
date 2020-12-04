@@ -23,7 +23,7 @@
             </div>
             <nav>
                 <p id="usuario"><?php echo $_SESSION["correo"];?></p>
-                <a href="" class="boton">Cerrar sesión</a>
+                <a href="php/conexion/cerrar.php" class="boton">Cerrar sesión</a>
             </nav>
         </div>
     </header>

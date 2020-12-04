@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
+-- version 5.0.3
 -- https://www.phpmyadmin.net/
 --
--- Servidor: 127.0.0.1:3306
--- Tiempo de generación: 30-11-2020 a las 23:19:27
--- Versión del servidor: 8.0.21
--- Versión de PHP: 7.3.21
+-- Servidor: 127.0.0.1
+-- Tiempo de generación: 04-12-2020 a las 15:57:44
+-- Versión del servidor: 10.4.14-MariaDB
+-- Versión de PHP: 7.4.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -27,23 +27,33 @@ SET time_zone = "+00:00";
 -- Estructura de tabla para la tabla `usuarios`
 --
 
-DROP TABLE IF EXISTS `usuarios`;
-CREATE TABLE IF NOT EXISTS `usuarios` (
+CREATE TABLE `usuarios` (
   `correo` text NOT NULL,
   `nombre` text NOT NULL,
   `apellido` text NOT NULL,
   `contrasenna` text NOT NULL,
-  `rol` int NOT NULL,
-  PRIMARY KEY (`correo`(100))
-) ENGINE=MyISAM;
+  `rol` int(11) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `usuarios`
 --
 
 INSERT INTO `usuarios` (`correo`, `nombre`, `apellido`, `contrasenna`, `rol`) VALUES
-('ASDF', '', '', '', 0),
-('ASDF@ASDF.COM', 'ASDF', 'ASDF', 'ASDF', 0);
+('hola@tordotec.com', 'Admin', 'istrador', 'Admin147852', 0),
+('miguel.sosa@tordotec.com', 'Miguel', 'Sosa', '@147852', 1),
+('adriana.castillo@tordotec.com', 'Adriana', 'Castillo', '@123456', 2),
+('owen.enriquez@tordotec.com', 'Owen', 'Enríquez', '@789456', 3);
+
+--
+-- Índices para tablas volcadas
+--
+
+--
+-- Indices de la tabla `usuarios`
+--
+ALTER TABLE `usuarios`
+  ADD PRIMARY KEY (`correo`(100));
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -23,7 +23,7 @@
             </div>
             <nav>
                 <p id="usuario"><?php echo $_SESSION["correo"];?></p>
-                <a href="" class="boton">Cerrar sesión</a>
+                <a href="php/conexion/cerrar.php" class="boton">Cerrar sesión</a>
             </nav>
         </div>
     </header>
@@ -88,8 +88,7 @@
                         echo <<<END
                         <div class="tarjeta">
                             <div class="tarjetaCuerpo">
-                                <p class="tarjetaSubtitulo">Puesto</p>
-                                <p class="tarjetaTexto">$datos[1]</p>
+                                <p class="tarjetaTitulo">$datos[1]</p>
                                 <p class="tarjetaSubtitulo">Descripción</p>
                                 <p class="tarjetaTexto">$datos[2]</p>
                                 <p class="tarjetaSubtitulo">Requisitos</p>
@@ -119,8 +118,7 @@
                         <form action="php/bolsaDeTrabajo/editarBolsa.php" method="post" autocomplete="off">
                             <div class="tarjeta">
                                 <div class="tarjetaCuerpo">
-                                    <p class="tarjetaSubtitulo">Puesto</p>
-                                    <p class="tarjetaTexto">$datos[1]</p>
+                                    <p class="tarjetaTitulo">$datos[1]</p>
                                     <p class="tarjetaSubtitulo">Descripción</p>
                                     <p class="tarjetaTexto">$datos[2]</p>
                                     <p class="tarjetaSubtitulo">Requisitos</p>
@@ -157,8 +155,7 @@
                         <form action="php/bolsaDeTrabajo/eliminarBolsa.php" method="post" autocomplete="off">
                             <div class="tarjeta">
                                 <div class="tarjetaCuerpo">
-                                    <p class="tarjetaSubtitulo">Puesto</p>
-                                    <p class="tarjetaTexto">$datos[1]</p>
+                                   <p class="tarjetaTitulo">$datos[1]</p>
                                     <p class="tarjetaSubtitulo">Descripción</p>
                                     <p class="tarjetaTexto">$datos[2]</p>
                                     <p class="tarjetaSubtitulo">Requisitos</p>
