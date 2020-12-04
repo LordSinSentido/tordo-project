@@ -23,6 +23,7 @@
             $_SESSION["nombre"] = $datos[1];
             $_SESSION["apellido"] = $datos[2];
             $_SESSION["correo"] = $datos[0];
+            $_SESSION["rol"] = $datos[4];
 
             header("Location: ../../inicio.php");
         }else {
