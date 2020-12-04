@@ -41,30 +41,38 @@
     </section>
 
     <section id="panelAgregar" class="ocultar">
-        <form action="php/proyectos/agregarProyecto.php" method="post" autocomplete="off" enctype="multipart/form-data">
+        <form action="php/proyectos/agregarBolsa.php" method="post" autocomplete="off" enctype="multipart/form-data">
             <h3>Agregar nuevo puesto</h3>
 
             <div class="formularioElemento">
+                <label for="id">Identificación</label>
+                <textarea name="id" id="id" placeholder="Identificación"></textarea>
+            </div>  
+            
+            <div class="formularioElemento">
                 <label for="Puesto">Puesto</label>
                 <select name="Puesto" id="Puesto">
-                    <option value="Becario">Becario</option>
-                    <option value="Operador">Operador de maquinaria</option>
+                    <option value="0">Contador</option>
+                    <option value="1">Ingeniero</option>
+                    <option value="2">Operador</option>
+                    <option value="3">Jefe de operación</option>
+                    <option value="4">Becario</option> 
                 </select>
             </div>
 
             <div class="formularioElemento">
-                <label for="Descripcion">Descripción</label>
-                <textarea name="Descripcion" id="Descripcion" placeholder="Descripción de lo que se hará en ese puesto."></textarea>
+                <label for="descripcion">Descripción</label>
+                <textarea name="descripcion" id="descripcion" placeholder="Descripción de lo que se hará en el puesto."></textarea>
             </div>        
 
             <div class="formularioElemento">
-                <label for="Requerimientos">Requerimientos</label>
-                <textarea name="Requerimientos" id="Requerimientos" placeholder="Requerimientos a cumplir de los aspirantes al puesto."></textarea>
+                <label for="requerimientos">Requerimientos</label>
+                <textarea name="requerimientos" id="requerimientos" placeholder="Requesitos a cumplir."></textarea>
             </div>
 
             <div class="formularioElemento">
-                <label for="Sueldo">Sueldo y Prestaciones</label>
-                <textarea name="Sueldo" id="Sueldo" placeholder="Sueldo y prestaciones que ofrecemos por el puesto."></textarea>
+                <label for="sueldo">Sueldo y Prestaciones</label>
+                <textarea name="sueldo" id="sueldo" placeholder="sueldo y prestaciones que se ofrecen por el puesto."></textarea>
             </div>
 
             <div class="formularioBotonera">
@@ -80,17 +88,16 @@
         <div class="grid">
             <?php
                 include("php/conexion/casper.php");
-                $leer = "SELECT * FROM maquinarias";
+                $leer = "SELECT * FROM bolsa";
                 $query = $conexion->query($leer);
 
                 if ($query == true) {
                     while ($datos = mysqli_fetch_array($query)) {
                         echo <<<END
                         <div class="tarjeta">
-                            <div class="tarjetaImagen">
-                                <img src="../inicio/img/bolsa/$datos[6]" alt="$datos[1] $datos[3] de la marca $datos[2]">
-                            </div>
                             <div class="tarjetaCuerpo">
+                                <p class="tarjetaSubtitulo">Id</p>
+                                <p class="tarjetaTexto">$datos[0]</p>
                                 <p class="tarjetaSubtitulo">Puesto</p>
                                 <p class="tarjetaTexto">$datos[1]</p>
                                 <p class="tarjetaSubtitulo">Descripción</p>
@@ -121,10 +128,9 @@
                         echo <<<END
                         <form action="php/bolsa/editarBolsa.php" method="post" autocomplete="off">
                             <div class="tarjeta">
-                                <div class="tarjetaImagen">
-                                    <img src="../inicio/img/bolsa/$datos[6]" alt="$datos[1] $datos[3] de la marca $datos[2]">
-                                </div>
                                 <div class="tarjetaCuerpo">
+                                    <p class="tarjetaSubtitulo">Id</p>
+                                    <p class="tarjetaTexto">$datos[0]</p>
                                     <p class="tarjetaSubtitulo">Puesto</p>
                                     <p class="tarjetaTexto">$datos[1]</p>
                                     <p class="tarjetaSubtitulo">Descripción</p>
@@ -159,10 +165,9 @@
                         echo <<<END
                         <form action="php/bolsa/eliminarBolsa.php" method="post" autocomplete="off">
                             <div class="tarjeta">
-                                <div class="tarjetaImagen">
-                                    <img src="../inicio/img/bolsa/$datos[6]" alt="$datos[1] $datos[3] de la marca $datos[2]">
-                                </div>
                                 <div class="tarjetaCuerpo">
+                                    <p class="tarjetaSubtitulo">Id</p>
+                                    <p class="tarjetaTexto">$datos[0]</p>
                                     <p class="tarjetaSubtitulo">Puesto</p>
                                     <p class="tarjetaTexto">$datos[1]</p>
                                     <p class="tarjetaSubtitulo">Descripción</p>
