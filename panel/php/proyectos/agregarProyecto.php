@@ -42,6 +42,7 @@
 
         <script languaje='javascript'>
             alert('Hubo un problema, comuniquese con el administrador.');
+            window.location.href="../../proyectos.php";
         </script>
 
         END;
