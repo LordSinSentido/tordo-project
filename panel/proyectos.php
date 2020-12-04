@@ -105,7 +105,7 @@
                         echo <<<END
                         <div class="tarjeta">
                             <div class="tarjetaImagen">
-                                <img src="../inicio/img/proyectos/$datos[7]" alt="Imagen no disponible.">
+                                <img src="../inicio/img/proyectos/$datos[6]" alt="Imagen no disponible.">
                             </div>
                             <div class="tarjetaCuerpo">
                                 <p class="tarjetaSubtitulo">Titulo</p>
@@ -141,7 +141,7 @@
                         <form action="php/proyectos/editarProyecto.php" method="post" autocomplete="off">
                             <div class="tarjeta">
                                 <div class="tarjetaImagen">
-                                    <img src="../inicio/img/maquinaria/$datos[6]" alt="$datos[1] $datos[3] de la marca $datos[2]">
+                                    <img src="../inicio/img/proyectos/$datos[6]" alt="Imagen no disponible.">
                                 </div>
                                 <div class="tarjetaCuerpo">
                                     <p class="tarjetaSubtitulo">Titulo</p>
@@ -159,6 +159,9 @@
                                     <button type="submit" class="boton">Actualizar</button>
                                 </div>
                             </div>
+                            <select class="ocultar" name="id" id="$datos[0]">
+                                <option value="$datos[0]">$datos[0]</option>
+                            </select>
                         </form>
                         END;
                     }
@@ -172,7 +175,7 @@
 
         <div class="grid">
             <?php
-                $leer = "SELECT * FROM proyecto";
+                $leer = "SELECT * FROM proyectos";
                 $query = $conexion->query($leer);
 
                 if ($query == true) {
@@ -181,7 +184,7 @@
                         <form action="php/proyectos/eliminarProyecto.php" method="post" autocomplete="off">
                             <div class="tarjeta">
                                 <div class="tarjetaImagen">
-                                    <img src="../inicio/img/proyectos/$datos[6]" alt="$datos[1] $datos[3] de la marca $datos[2]">
+                                    <img src="../inicio/img/proyectos/$datos[6]" alt="Imagen no disponible.">
                                 </div>
                                 <div class="tarjetaCuerpo">
                                     <p class="tarjetaSubtitulo">Titulo</p>
@@ -199,6 +202,9 @@
                                     <button type="submit" class="boton">Eliminar</button>
                                 </div>
                             </div>
+                            <select class="ocultar" name="id" id="$datos[0]">
+                                <option value="$datos[0]">$datos[0]</option>
+                            </select>
                         </form>
                         END;
                     }
