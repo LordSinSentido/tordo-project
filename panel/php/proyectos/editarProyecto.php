@@ -76,7 +76,7 @@
                                     <input type="date" name="fecha" id="fecha" placeholder="Fecha de realización del proyecto." value="$datos[5]">
                                 </div>
 
-                                <div class="formularioElemento">
+                                <!--div class="formularioElemento">
                                     <label for="imagen">Subir imagen 1</label>
                                     <input type="file" name="img1" id="img1"> Imagen actual $datos[6]
                                 </div>
@@ -89,7 +89,7 @@
                                 <div class="formularioElemento">
                                     <label for="imagen">Subir imagen 3</label>
                                     <input type="file" name="imagen3" id="imagen3"> Imagen actual $datos[8]
-                                </div>
+                                </div-->
                                 
                                 <div class="formularioElemento">
                                     <input type="hidden" name="id" id="id" value="$datos[0]">

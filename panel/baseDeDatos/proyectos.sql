@@ -33,7 +33,10 @@ CREATE TABLE `proyectos` (
   `lugar` tinytext NOT NULL,
   `descripcion` longtext NOT NULL,
   `alcance` longtext NOT NULL,
-  `fecha` date NOT NULL
+  `fecha` date NOT NULL,
+  `imagen1` longtext NOT NULL,
+  `imagen2` longtext NOT NULL,
+  `imagen3` longtext NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --

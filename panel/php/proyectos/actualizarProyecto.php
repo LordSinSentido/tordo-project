@@ -30,7 +30,7 @@
     move_uploaded_file($binario3,$ruta3);
 
 */
-    $actualizar = "UPDATE proyectos SET titulo = '$titulo', lugar = '$lugar', descripcion = '$descripcion', alcance = '$alcance', fecha = '$fecha', imagen1 = '0-01.jpg', imagen2 = '0-02.jpg', imagen3 = '0-03.jpg' WHERE id = '$id'";
+    $actualizar = "UPDATE proyectos SET titulo = '$titulo', lugar = '$lugar', descripcion = '$descripcion', alcance = '$alcance', fecha = '$fecha' WHERE id = '$id'";
 
     if ($conexion->query($actualizar) == TRUE) {
         echo <<<END
