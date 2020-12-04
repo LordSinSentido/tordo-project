@@ -6,6 +6,7 @@
     $descripcion = $_POST['descripcion'];
     $alcance = $_POST['alcance'];
     $fecha = $_POST['fecha'];
+    
     $imagen1 = $_FILES['imagen1']['name'];
     $binario1 = $_FILES['imagen1']['tmp_name'];
     $ruta1 = "../../../inicio/img/proyectos";
@@ -41,7 +42,6 @@
 
         <script languaje='javascript'>
             alert('Hubo un problema, comuniquese con el administrador.');
-            window.location.href="../../proyectos.php";
         </script>
 
         END;

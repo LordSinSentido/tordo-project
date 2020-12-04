@@ -46,7 +46,7 @@
 
             <div class="formularioElemento">
                 <label for="correo">Correo</label>
-                <input type="text" name="correo" id="correo" placeholder="usuario@ejemplo.com">
+                <input type="email" name="correo" id="correo" placeholder="usuario@ejemplo.com">
             </div>
 
             <div class="formularioElemento">
@@ -102,10 +102,25 @@
                                 <p class="tarjetaSubtitulo">Apellido</p>
                                 <p class="tarjetaTexto">$datos[2]</p>
                                 <p class="tarjetaSubtitulo">Rol</p>
-                                <p class="tarjetaTexto">$datos[4]</p>
+                        END;
+                        switch ($datos[4]) {
+                            case 0:
+                                echo '<p class="tarjetaTexto">Administrador</p>';
+                                break;
+                            case 1:
+                                echo '<p class="tarjetaTexto">Moderador</p>';
+                                break;
+                            case 2:
+                                echo '<p class="tarjetaTexto">Recursos humanos</p>';
+                                break;
+                            case 3:
+                                echo '<p class="tarjetaTexto">Publicador</p>';
+                                break;
+                        }
+                        echo <<<END
                             </div>
                         </div>
-                    END;
+                        END;
                     }
                 }
             ?>
@@ -133,7 +148,22 @@
                                     <p class="tarjetaSubtitulo">Apellido</p>
                                     <p class="tarjetaTexto">$datos[2]</p>
                                     <p class="tarjetaSubtitulo">Rol</p>
-                                    <p class="tarjetaTexto">$datos[4]</p>
+                        END;
+                        switch ($datos[4]) {
+                            case 0:
+                                echo '<p class="tarjetaTexto">Administrador</p>';
+                                break;
+                            case 1:
+                                echo '<p class="tarjetaTexto">Moderador</p>';
+                                break;
+                            case 2:
+                                echo '<p class="tarjetaTexto">Recursos humanos</p>';
+                                break;
+                            case 3:
+                                echo '<p class="tarjetaTexto">Publicador</p>';
+                                break;
+                        }
+                        echo <<<END
                                 </div>
                                 <div class="tarjetaBotonera">
                                     <button type="submit" class="boton">Actualizar</button>
@@ -171,7 +201,22 @@
                                     <p class="tarjetaSubtitulo">Apellido</p>
                                     <p class="tarjetaTexto">$datos[2]</p>
                                     <p class="tarjetaSubtitulo">Rol</p>
-                                    <p class="tarjetaTexto">$datos[4]</p>
+                        END;
+                        switch ($datos[4]) {
+                            case 0:
+                                echo '<p class="tarjetaTexto">Administrador</p>';
+                                break;
+                            case 1:
+                                echo '<p class="tarjetaTexto">Moderador</p>';
+                                break;
+                            case 2:
+                                echo '<p class="tarjetaTexto">Recursos humanos</p>';
+                                break;
+                            case 3:
+                                echo '<p class="tarjetaTexto">Publicador</p>';
+                                break;
+                        }
+                        echo <<<END
                                 </div>
                                 <div class="tarjetaBotonera">
                                     <button type="submit" class="boton">Eliminar</button>

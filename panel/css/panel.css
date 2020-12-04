@@ -76,6 +76,7 @@ textarea{
     font-family: 'Didact Gothic', sans-serif;
     font-size: 1em;
     width: 75%;
+    height: 10em;
     padding: 0.75em 1.5em;
     border: 0.25em solid var(--color_oscuro);
     border-radius: 0.25em;

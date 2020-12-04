@@ -41,38 +41,27 @@
     </section>
 
     <section id="panelAgregar" class="ocultar">
-        <form action="php/proyectos/agregarBolsa.php" method="post" autocomplete="off" enctype="multipart/form-data">
+        <form action="php/bolsaDeTrabajo/agregarBolsa.php" method="post" autocomplete="off" enctype="multipart/form-data">
             <h3>Agregar nuevo puesto</h3>
-
-            <div class="formularioElemento">
-                <label for="id">Identificación</label>
-                <textarea name="id" id="id" placeholder="Identificación"></textarea>
-            </div>  
             
             <div class="formularioElemento">
-                <label for="Puesto">Puesto</label>
-                <select name="Puesto" id="Puesto">
-                    <option value="0">Contador</option>
-                    <option value="1">Ingeniero</option>
-                    <option value="2">Operador</option>
-                    <option value="3">Jefe de operación</option>
-                    <option value="4">Becario</option> 
-                </select>
+                <label for="puesto">Puesto</label>
+                <input type="text" name="puesto" id="puesto" placeholder="Contador" >
             </div>
 
             <div class="formularioElemento">
                 <label for="descripcion">Descripción</label>
-                <textarea name="descripcion" id="descripcion" placeholder="Descripción de lo que se hará en el puesto."></textarea>
+                <textarea name="descripcion" id="descripcion" placeholder="Se busca contador..."></textarea>
             </div>        
 
             <div class="formularioElemento">
-                <label for="requerimientos">Requerimientos</label>
-                <textarea name="requerimientos" id="requerimientos" placeholder="Requesitos a cumplir."></textarea>
+                <label for="requisitos">Requisitos</label>
+                <textarea name="requisitos" id="requisitos" placeholder="Los requisitos para este puesto son..."></textarea>
             </div>
 
             <div class="formularioElemento">
                 <label for="sueldo">Sueldo y Prestaciones</label>
-                <textarea name="sueldo" id="sueldo" placeholder="sueldo y prestaciones que se ofrecen por el puesto."></textarea>
+                <textarea name="sueldo" id="sueldo" placeholder="Ofrecemos el siguiente sueldo y prestaciones..."></textarea>
             </div>
 
             <div class="formularioBotonera">
@@ -88,7 +77,7 @@
         <div class="grid">
             <?php
                 include("php/conexion/casper.php");
-                $leer = "SELECT * FROM bolsa";
+                $leer = "SELECT * FROM bolsatrabajo";
                 $query = $conexion->query($leer);
 
                 if ($query == true) {
@@ -96,8 +85,6 @@
                         echo <<<END
                         <div class="tarjeta">
                             <div class="tarjetaCuerpo">
-                                <p class="tarjetaSubtitulo">Id</p>
-                                <p class="tarjetaTexto">$datos[0]</p>
                                 <p class="tarjetaSubtitulo">Puesto</p>
                                 <p class="tarjetaTexto">$datos[1]</p>
                                 <p class="tarjetaSubtitulo">Descripción</p>
@@ -126,11 +113,9 @@
                 if ($query == true) {
                     while ($datos = mysqli_fetch_array($query)) {
                         echo <<<END
-                        <form action="php/bolsa/editarBolsa.php" method="post" autocomplete="off">
+                        <form action="php/bolsaDeTrabajo/editarBolsa.php" method="post" autocomplete="off">
                             <div class="tarjeta">
                                 <div class="tarjetaCuerpo">
-                                    <p class="tarjetaSubtitulo">Id</p>
-                                    <p class="tarjetaTexto">$datos[0]</p>
                                     <p class="tarjetaSubtitulo">Puesto</p>
                                     <p class="tarjetaTexto">$datos[1]</p>
                                     <p class="tarjetaSubtitulo">Descripción</p>
@@ -144,6 +129,9 @@
                                     <button type="submit" class="boton">Actualizar</button>
                                 </div>
                             </div>
+                            <select class="ocultar" name="id" id="$datos[0]">
+                                <option value="$datos[0]">$datos[0]</option>
+                            </select>
                         </form>
                         END;
                     }
@@ -163,11 +151,9 @@
                 if ($query == true) {
                     while ($datos = mysqli_fetch_array($query)) {
                         echo <<<END
-                        <form action="php/bolsa/eliminarBolsa.php" method="post" autocomplete="off">
+                        <form action="php/bolsaDeTrabajo/eliminarBolsa.php" method="post" autocomplete="off">
                             <div class="tarjeta">
                                 <div class="tarjetaCuerpo">
-                                    <p class="tarjetaSubtitulo">Id</p>
-                                    <p class="tarjetaTexto">$datos[0]</p>
                                     <p class="tarjetaSubtitulo">Puesto</p>
                                     <p class="tarjetaTexto">$datos[1]</p>
                                     <p class="tarjetaSubtitulo">Descripción</p>
@@ -181,6 +167,9 @@
                                     <button type="submit" class="boton">Eliminar</button>
                                 </div>
                             </div>
+                            <select class="ocultar" name="id" id="$datos[0]">
+                                <option value="$datos[0]">$datos[0]</option>
+                            </select>
                         </form>
                         END;
                     }

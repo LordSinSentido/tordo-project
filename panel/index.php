@@ -27,7 +27,7 @@
         <form action="php/conexion/acceso.php" method="post" autocomplete="off">
             <div class="formularioElemento">
                 <label for="correo">Correo</label>
-                <input type="text" name="correo" id="correo" placeholder="usuario@ejemplo.com" required>
+                <input type="email" name="correo" id="correo" placeholder="usuario@ejemplo.com" required>
             </div>
 
             <div class="formularioElemento">
