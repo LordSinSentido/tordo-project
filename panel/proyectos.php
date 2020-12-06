@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tordo | MAGI</title>
     <link rel="shortcut icon" href="img/icons/logo.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="css/flickity.css">
     <link rel="stylesheet" href="css/panel.css">
     <link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap" rel="stylesheet">
 </head>
@@ -108,7 +109,11 @@
                         echo <<<END
                         <div class="tarjeta">
                             <div class="tarjetaImagen">
-                                <img src="../inicio/img/proyectos/$datos[6]" alt="$datos[1]">
+                                <div class="gallery js-flickity" data-flickity-options='{ "wrapAround": true }'>
+                                    <div id="sldr1" class="gallery-cell"><img src="../inicio/img/proyectos/$datos[6]" alt="$datos[1]"></div>
+                                    <div id="sldr2" class="gallery-cell"><img src="../inicio/img/proyectos/$datos[7]" alt="$datos[1]"></div>
+                                    <div id="sldr3" class="gallery-cell"><img src="../inicio/img/proyectos/$datos[8]" alt="$datos[1]"></div>
+                                </div>
                             </div>
                             <div class="tarjetaCuerpo">
                                 <p class="tarjetaTitulo">$datos[1]</p>
@@ -214,6 +219,7 @@
     </section>
 
     <script src="js/panel.js"></script> 
+    <script src="js/flickity.js"></script>
 </body>
 </html>
 

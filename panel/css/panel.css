@@ -334,6 +334,27 @@ button{
     margin-bottom: 1em;
 }
 
+.gallery-cell {
+    width: fit-content;
+    height: fit-content;
+    max-height: 15em;
+    counter-increment: gallery-cell;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.flickity-page-dots{
+    display: none;
+    visibility: collapse;
+}
+
+/* cell number */
+.gallery-cell > img{
+    width: 100%;
+}
+
 #usuario{
     width: fit-content;
     display: block;
