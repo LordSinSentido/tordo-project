@@ -141,8 +141,9 @@ button{
 }
 
 .ocultar{
-    display: none;
     visibility: collapse;
+    position: fixed;
+    opacity: 0;
 }
 
 .logotipo{
