@@ -84,7 +84,21 @@
 
             <div class="formularioElemento">
                 <label for="rento">Maquinaria que rentó</label>
-                <input type="text" name="rento" id="rento" placeholder="CAD0000ASDFG00000X">
+                <select name="rento" id="rento">
+                    <?php
+                        include("php/conexion/casper.php");
+                        $leer = "SELECT * FROM maquinarias";
+                        $query = $conexion->query($leer);
+
+                        if ($query == true) {
+                            while ($datos = mysqli_fetch_array($query)) {
+                                echo <<<END
+                                    <option value="$datos[0]">$datos[1] $datos[3] $datos[2] - $datos[0]</option>
+                                END;
+                            }
+                        }
+                    ?>
+                </select>
             </div>
 
             <div class="formularioBotonera">
@@ -99,7 +113,6 @@
 
         <div class="grid">
             <?php
-                include("php/conexion/casper.php");
                 $leer = "SELECT * FROM clientes";
                 $query = $conexion->query($leer);
 

@@ -85,16 +85,36 @@
                                 <input type="date" name="fecha" id="fecha" value='$datos[7]'>
                             </div>
 
+                            
+                            <div class="formularioElemento ocultar">
+                                <label for="id">Id</label>
+                                <input type="text" name="id" id="id" placeholder="$datos[0]" value='$datos[0]' hidden readonly>
+                            </div>
+
                             <div class="formularioElemento">
                                 <label for="rento">Maquinaria que rentó</label>
-                                <input type="text" name="rento" id="rento" placeholder="CAD0000ASDFG00000X" value='$datos[8]'>
-                            </div>
+                                <select name="rento" id="rento">
+                            END;
+                            $leerm = "SELECT * FROM maquinarias";
+                            $querym = $conexion->query($leerm);
 
-                            <div class="formularioElemento">
-                                <label for="id">Id</label>
-                                <input type="text" name="id" id="id" placeholder="$datos[0]" value='$datos[0]'>
+                            if ($querym == true) {
+                                while ($datosm = mysqli_fetch_array($querym)) {
+                            echo <<<END
+                                <option value="$datosm[0]"
+                            END;
+                                    if ($datos[8] == $datosm[0]) {
+                                        echo 'selected';
+                                    }
+                            echo <<<END
+                                >$datosm[1] $datosm[3] $datosm[2] - $datosm[0]</option>
+                            END;
+                                }
+                            }
+                            echo <<<END
+                                </select>
                             </div>
-
+                            
                             <div class="formularioBotonera">
                                 <button type="submit" class="boton">Actualizar</button>
                             </div>
