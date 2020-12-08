@@ -20,11 +20,11 @@
                     </div>
                 </div>
                 <nav>
-                    <a class="botones" href="index.html">Inicio</a>
-                    <a class="botones" href="servicios.html">Servicios</a>
-                    <a class="botones" href="proyectos.html">Proyectos</a>
-                    <a class="botones" href="rentaDeMaquinaria.html">Maquinaría</a>
-                    <a class="botones" href="contacto.html">Contacto</a>
+                    <a class="botones" href="index.php">Inicio</a>
+                    <a class="botones" href="servicios.php">Servicios</a>
+                    <a class="botones" href="proyectos.php">Proyectos</a>
+                    <a class="botones" href="rentaDeMaquinaria.php">Maquinaría</a>
+                    <a class="botones" href="contacto.php">Contacto</a>
                 </nav>
             </div>
         </header>
@@ -38,8 +38,31 @@
 
         <section>
             <h2>Vacantes disponibles</h2>
-            <div class="grid" id="importacion">
-                
+            <p>Si estás interesado en algún puesto que esté publicado en esta página, puedes ponerte en contacto con nuestro departamento de recursos humanos vía correo electrónico.</p>
+            <div class="grid" id="importacion" style="margin-top: 2em;">
+            <?php
+                include("php/melchior.php");
+                $leer = "SELECT * FROM bolsatrabajo";
+                $query = $conexion->query($leer);
+
+                if ($query == true) {
+                    while ($datos = mysqli_fetch_array($query)) {
+                        echo <<<END
+                        <div class="tarjeta">
+                            <div class="tarjetaCuerpo">
+                                <p class="tarjetaTitulo">$datos[1]</p>
+                                <p class="tarjetaSubtitulo">Descripción</p>
+                                <p class="tarjetaTexto">$datos[2]</p>
+                                <p class="tarjetaSubtitulo">Requisitos</p>
+                                <p class="tarjetaTexto">$datos[3]</p>
+                                <p class="tarjetaSubtitulo">Sueldo</p>
+                                <p class="tarjetaTexto">$datos[4]</p>
+                            </div>
+                        </div>
+                        END;
+                    }
+                }
+            ?>
             </div>
         </section>
 
@@ -58,10 +81,10 @@
                 <div class="gridFooter">
                     <ul>
                         <p><b>Secciones del inicio</b></p>
-                        <li><a href="index.html#nosotros">Nosotros</a></li>
-                        <li><a href="index.html#iservicios">Servicios</a></li>
-                        <li><a href="index.html#iproyectos">Recientes</a></li>
-                        <li><a href="index.html#icontacto">Contáctanos</a></li>
+                        <li><a href="index.php#nosotros">Nosotros</a></li>
+                        <li><a href="index.php#iservicios">Servicios</a></li>
+                        <li><a href="index.php#iproyectos">Recientes</a></li>
+                        <li><a href="index.php#icontacto">Contáctanos</a></li>
                     </ul>
 
                     <ul>
@@ -75,11 +98,11 @@
 
                     <ul>
                         <p><b>Páginas del sitio</b></p>
-                        <li><a href="index.html">Página principal</a></li>
-                        <li><a href="servicios.html">Servicios que ofrecemos</a></li>
-                        <li><a href="proyectos.html">Todos los proyectos</a></li>
-                        <li><a href="rentaDeMaquinaria.html">Renta de maquinaria</a></li>
-                        <li><a href="bolsaDeTrabajo.html">Bolsa de trabajo</a></li>
+                        <li><a href="index.php">Página principal</a></li>
+                        <li><a href="servicios.php">Servicios que ofrecemos</a></li>
+                        <li><a href="proyectos.php">Todos los proyectos</a></li>
+                        <li><a href="rentaDeMaquinaria.php">Renta de maquinaria</a></li>
+                        <li><a href="bolsaDeTrabajo.php">Bolsa de trabajo</a></li>
                     </ul>
                 </div>
 

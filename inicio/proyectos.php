@@ -60,11 +60,11 @@
                     </div>
                 </div>
                 <nav>
-                    <a class="botones" href="index.html">Inicio</a>
-                    <a class="botones" href="servicios.html">Servicios</a>
+                    <a class="botones" href="index.php">Inicio</a>
+                    <a class="botones" href="servicios.php">Servicios</a>
                     <a class="botones botonBloqueado">Proyectos</a>
-                    <a class="botones" href="rentaDeMaquinaria.html">Maquinaría</a>
-                    <a class="botones" href="contacto.html">Contacto</a>
+                    <a class="botones" href="rentaDeMaquinaria.php">Maquinaría</a>
+                    <a class="botones" href="contacto.php">Contacto</a>
                 </nav>
             </div>
         </header>
@@ -79,7 +79,48 @@
         <section>
             <h2>Nuestros proyectos</h2>
             <div class="grid" id="importacion">
-
+            <?php
+                include("php/melchior.php");
+                $leer = "SELECT * FROM proyectos ORDER BY fecha DESC";
+                $query = $conexion->query($leer);
+                
+                if ($query == true) {
+                    while ($datos = mysqli_fetch_array($query)) {
+                        echo <<<END
+                        <div class="tarjeta">
+                        <div class="tarjetaImagen">
+                        <div class="gallery js-flickity" data-flickity-options='{ "wrapAround": true }'>
+                        END;
+                        if ($datos[6] != '') {
+                            echo '<div id="sldr1" class="gallery-cell"><img src="../inicio/img/proyectos/' . $datos[6] . '" alt="$datos[1]"></div>';
+                        }
+                        
+                        if ($datos[7] != '') {
+                            echo '<div id="sldr2" class="gallery-cell"><img src="../inicio/img/proyectos/' . $datos[7] . '" alt="$datos[1]"></div>';
+                        }
+                        
+                        if ($datos[8] != '') {
+                            echo '<div id="sldr3" class="gallery-cell"><img src="../inicio/img/proyectos/' . $datos[8] . '" alt="$datos[1]"></div>';
+                        }
+                        echo <<<END
+                        </div>
+                        </div>
+                        <div class="tarjetaCuerpo">
+                        <p class="tarjetaTitulo">$datos[1]</p>
+                        <p class="tarjetaSubtitulo">Lugar</p>
+                        <p class="tarjetaTexto">$datos[2]</p>
+                        <p class="tarjetaSubtitulo">Descripción</p>
+                        <p class="tarjetaTexto">$datos[3]</p>
+                        <p class="tarjetaSubtitulo">Alcance</p>
+                        <p class="tarjetaTexto">$datos[4]</p>
+                        <p class="tarjetaSubtitulo">Fecha</p>
+                        <p class="tarjetaTexto">$datos[5]</p>
+                        </div>
+                        </div>
+                        END;
+                    }
+                }
+            ?>
             </div>
         </section>
 
@@ -98,10 +139,10 @@
                 <div class="gridFooter">
                     <ul>
                         <p><b>Secciones del inicio</b></p>
-                        <li><a href="index.html#nosotros">Nosotros</a></li>
-                        <li><a href="index.html#iservicios">Servicios</a></li>
-                        <li><a href="index.html#iproyectos">Recientes</a></li>
-                        <li><a href="index.html#icontacto">Contáctanos</a></li>
+                        <li><a href="index.php#nosotros">Nosotros</a></li>
+                        <li><a href="index.php#iservicios">Servicios</a></li>
+                        <li><a href="index.php#iproyectos">Recientes</a></li>
+                        <li><a href="index.php#icontacto">Contáctanos</a></li>
                     </ul>
 
                     <ul>
@@ -115,11 +156,11 @@
 
                     <ul>
                         <p><b>Páginas del sitio</b></p>
-                        <li><a href="index.html">Página principal</a></li>
-                        <li><a href="servicios.html">Servicios que ofrecemos</a></li>
-                        <li><a href="proyectos.html">Todos los proyectos</a></li>
-                        <li><a href="rentaDeMaquinaria.html">Renta de maquinaria</a></li>
-                        <li><a href="bolsaDeTrabajo.html">Bolsa de trabajo</a></li>
+                        <li><a href="index.php">Página principal</a></li>
+                        <li><a href="servicios.php">Servicios que ofrecemos</a></li>
+                        <li><a href="proyectos.php">Todos los proyectos</a></li>
+                        <li><a href="rentaDeMaquinaria.php">Renta de maquinaria</a></li>
+                        <li><a href="bolsaDeTrabajo.php">Bolsa de trabajo</a></li>
                     </ul>
                 </div>
 
@@ -129,7 +170,7 @@
             </section>
         </footer>
 
-        <script src="js/proyectos.js"></script>
+        <!--script src="js/proyectos.js"></script-->
         <script src="js/flickity.js"></script>
     </body>
 </html>

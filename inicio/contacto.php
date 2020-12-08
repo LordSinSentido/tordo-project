@@ -20,10 +20,10 @@
                     </div>
                 </div>
                 <nav>
-                    <a class="botones" href="index.html">Inicio</a>
-                    <a class="botones" href="servicios.html">Servicios</a>
-                    <a class="botones" href="proyectos.html">Proyectos</a>
-                    <a class="botones" href="rentaDeMaquinaria.html">Maquinaría</a>
+                    <a class="botones" href="index.php">Inicio</a>
+                    <a class="botones" href="servicios.php">Servicios</a>
+                    <a class="botones" href="proyectos.php">Proyectos</a>
+                    <a class="botones" href="rentaDeMaquinaria.php">Maquinaría</a>
                     <a class="botones botonBloqueado">Contacto</a>
                 </nav>
             </div>
@@ -89,7 +89,7 @@
             </div>
 
             <div class="botonDerecha">
-                <a class="botones" href="bolsaDeTrabajo.html">Ver bolsa de trabajo</a>
+                <a class="botones" href="bolsaDeTrabajo.php">Ver bolsa de trabajo</a>
             </div>
         </section>
         
@@ -108,10 +108,10 @@
                 <div class="gridFooter">
                     <ul>
                         <p><b>Secciones del inicio</b></p>
-                        <li><a href="index.html#nosotros">Nosotros</a></li>
-                        <li><a href="index.html#iservicios">Servicios</a></li>
-                        <li><a href="index.html#iproyectos">Recientes</a></li>
-                        <li><a href="index.html#icontacto">Contáctanos</a></li>
+                        <li><a href="index.php#nosotros">Nosotros</a></li>
+                        <li><a href="index.php#iservicios">Servicios</a></li>
+                        <li><a href="index.php#iproyectos">Recientes</a></li>
+                        <li><a href="index.php#icontacto">Contáctanos</a></li>
                     </ul>
 
                     <ul>
@@ -125,11 +125,11 @@
 
                     <ul>
                         <p><b>Páginas del sitio</b></p>
-                        <li><a href="index.html">Página principal</a></li>
-                        <li><a href="servicios.html">Servicios que ofrecemos</a></li>
-                        <li><a href="proyectos.html">Todos los proyectos</a></li>
-                        <li><a href="rentaDeMaquinaria.html">Renta de maquinaria</a></li>
-                        <li><a href="bolsaDeTrabajo.html">Bolsa de trabajo</a></li>
+                        <li><a href="index.php">Página principal</a></li>
+                        <li><a href="servicios.php">Servicios que ofrecemos</a></li>
+                        <li><a href="proyectos.php">Todos los proyectos</a></li>
+                        <li><a href="rentaDeMaquinaria.php">Renta de maquinaria</a></li>
+                        <li><a href="bolsaDeTrabajo.php">Bolsa de trabajo</a></li>
                     </ul>
                 </div>
 

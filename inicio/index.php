@@ -61,10 +61,10 @@
                 </div>
                 <nav>
                     <a class="botones botonBloqueado">Inicio</a>
-                    <a class="botones" href="servicios.html">Servicios</a>
-                    <a class="botones" href="proyectos.html">Proyectos</a>
-                    <a class="botones" href="rentaDeMaquinaria.html">Maquinaría</a>
-                    <a class="botones" href="contacto.html">Contacto</a>
+                    <a class="botones" href="servicios.php">Servicios</a>
+                    <a class="botones" href="proyectos.php">Proyectos</a>
+                    <a class="botones" href="rentaDeMaquinaria.php">Maquinaría</a>
+                    <a class="botones" href="contacto.php">Contacto</a>
                 </nav>
             </div>
         </header>
@@ -123,21 +123,67 @@
                 </div>
                 <div class="toast">
                     <img src="img/icons/machine.svg" alt="Icono" class="iconos toastIcono">
-                    <p>Renta de maquinaria.<br><a class="toastEnlace" href="rentaDeMaquinaria.html">Más información »</a></p>
+                    <p>Renta de maquinaria.<br><a class="toastEnlace" href="rentaDeMaquinaria.php">Más información »</a></p>
                 </div>
             </div>
             <div class="botonDerecha">
-                <a class="botones" href="servicios.html">Ver todos los servicios</a>
+                <a class="botones" href="servicios.php">Ver todos los servicios</a>
             </div>
         </section>
         
         <section id="iproyectos">
             <h2>Proyectos recientes</h2>
             <div class="grid" id="tarjetas">
+            <?php
+                include("php/melchior.php");
+                $leer = "SELECT * FROM proyectos ORDER BY fecha DESC";
+                $query = $conexion->query($leer);
                 
+                if ($query == true) {
+                    $i = 0;
+                    while ($datos = mysqli_fetch_array($query)) {
+                        echo <<<END
+                        <div class="tarjeta">
+                        <div class="tarjetaImagen">
+                        <div class="gallery js-flickity" data-flickity-options='{ "wrapAround": true }'>
+                        END;
+                        if ($datos[6] != '') {
+                            echo '<div id="sldr1" class="gallery-cell"><img src="img/proyectos/' . $datos[6] . '" alt="$datos[1]"></div>';
+                        }
+                        
+                        if ($datos[7] != '') {
+                            echo '<div id="sldr2" class="gallery-cell"><img src="img/proyectos/' . $datos[7] . '" alt="$datos[1]"></div>';
+                        }
+                        
+                        if ($datos[8] != '') {
+                            echo '<div id="sldr3" class="gallery-cell"><img src="img/proyectos/' . $datos[8] . '" alt="$datos[1]"></div>';
+                        }
+                        echo <<<END
+                        </div>
+                        </div>
+                        <div class="tarjetaCuerpo">
+                        <p class="tarjetaTitulo">$datos[1]</p>
+                        <p class="tarjetaSubtitulo">Lugar</p>
+                        <p class="tarjetaTexto">$datos[2]</p>
+                        <p class="tarjetaSubtitulo">Descripción</p>
+                        <p class="tarjetaTexto">$datos[3]</p>
+                        <p class="tarjetaSubtitulo">Alcance</p>
+                        <p class="tarjetaTexto">$datos[4]</p>
+                        <p class="tarjetaSubtitulo">Fecha</p>
+                        <p class="tarjetaTexto">$datos[5]</p>
+                        </div>
+                        </div>
+                        END;
+                        $i++;
+                        if ($i == 3) {
+                            break;
+                        }
+                    }
+                }
+            ?>
             </div>
             <div class="botonDerecha">
-                <a class="botones" href="proyectos.html">Ver todos los proyectos</a>
+                <a class="botones" href="proyectos.php">Ver todos los proyectos</a>
             </div>
         </section>
         
@@ -161,7 +207,7 @@
                 </div>
             </div>
             <div class="botonDerecha">
-                <a class="botones" href="contacto.html">Ver más información</a>
+                <a class="botones" href="contacto.php">Ver más información</a>
             </div>
         </section>
         
@@ -180,10 +226,10 @@
                 <div class="gridFooter">
                     <ul>
                         <p><b>Secciones del inicio</b></p>
-                        <li><a href="index.html#nosotros">Nosotros</a></li>
-                        <li><a href="index.html#iservicios">Servicios</a></li>
-                        <li><a href="index.html#iproyectos">Recientes</a></li>
-                        <li><a href="index.html#icontacto">Contáctanos</a></li>
+                        <li><a href="index.php#nosotros">Nosotros</a></li>
+                        <li><a href="index.php#iservicios">Servicios</a></li>
+                        <li><a href="index.php#iproyectos">Recientes</a></li>
+                        <li><a href="index.php#icontacto">Contáctanos</a></li>
                     </ul>
 
                     <ul>
@@ -197,11 +243,11 @@
 
                     <ul>
                         <p><b>Páginas del sitio</b></p>
-                        <li><a href="index.html">Página principal</a></li>
-                        <li><a href="servicios.html">Servicios que ofrecemos</a></li>
-                        <li><a href="proyectos.html">Todos los proyectos</a></li>
-                        <li><a href="rentaDeMaquinaria.html">Renta de maquinaria</a></li>
-                        <li><a href="bolsaDeTrabajo.html">Bolsa de trabajo</a></li>
+                        <li><a href="index.php">Página principal</a></li>
+                        <li><a href="servicios.php">Servicios que ofrecemos</a></li>
+                        <li><a href="proyectos.php">Todos los proyectos</a></li>
+                        <li><a href="rentaDeMaquinaria.php">Renta de maquinaria</a></li>
+                        <li><a href="bolsaDeTrabajo.php">Bolsa de trabajo</a></li>
                     </ul>
                 </div>
 
@@ -211,7 +257,7 @@
             </section>
         </footer>
         
-        <script src="js/index.js"></script>
+        <!--script src="js/index.js"></script-->
         <script src="js/flickity.js"></script>
     </body>
     </html>

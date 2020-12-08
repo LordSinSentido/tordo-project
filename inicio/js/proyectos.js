@@ -3,34 +3,10 @@
 window.onload = mostrarMaquinaria();
 
 function mostrarMaquinaria() {
-    let cuerpo = document.querySelector('#importacion');
-    fetch('datos/proyectos.json')
-    .then(respuesta => respuesta.json())
-    .then(datos => {
-        for(let i of datos.reverse()) {
-
-            cuerpo.innerHTML += `
-            
-            <div class="card" id="proyectoNumero${i.id}">
-                <div class="cardImg">
-                    <img class="cardImagen" src="${i.img}" alt="${i.titulo}">
-                </div>
-                <div class="cardCuerpo">
-                    <p class="cardTitulo"><b>${i.titulo}</b></p>
-                    <p class="cardParrafo">${i.pie}</p>
-                </div>
-                <div class="cardPie">
-                    <a class="botones cardBotones modalAbrir" id="${i.id}">Ver más</a>
-                </div>
-            </div>
-            
-            `;
-        };
-        let botones = document.querySelectorAll('.modalAbrir');
-        for(const i of botones) {
-            i.addEventListener('click', modalWindow);
-        };
-    });
+    let botones = document.querySelectorAll('.modalAbrir');
+    for(const i of botones) {
+        i.addEventListener('click', modalWindow);
+    };
 }
 
 function modalWindow(e) {

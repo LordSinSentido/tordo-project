@@ -174,7 +174,7 @@ li > a{
     text-decoration: none;
 }
 
-.card{
+.tarjeta{
     display: flex;
     flex-direction: column;
     overflow: hidden;
@@ -184,32 +184,34 @@ li > a{
     background: white;
 }
 
-.card:hover{
+.tarjeta:hover{
     border: 0.25em solid var(--color_realce);
     transition: 0.2s;
 }
 
-.cardImg > img{
+.tarjetaCuerpo {
+    margin: 1em 0em;
+    padding: 0em 2em;
+}
+
+.tarjetaImagen > img{
     width: 100%;
 }
 
-.cardTitulo {
+.tarjetaTitulo {
     font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 0.5em;
 }
 
-.cardCuerpo {
-    padding: 0em 1.5em;
-    margin-top: 1em;
+.tarjetaSubtitulo {
+    font-weight: bold;
+    margin-top: 0.5em;
 }
 
-.cardPie {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    justify-content: flex-end;
-    align-items: flex-end;
-    padding: 0em 1.5em;
+.tarjetaBotonera{
     margin: 1em 0em;
+    padding: 0em 2em;
 }
 
 .modalContenedor{
@@ -255,22 +257,23 @@ li > a{
 }
   
 .gallery-cell {
-    width: 66%;
-    height: 25vh;
-    margin-right: 10px;
+    width: fit-content;
+    height: fit-content;
+    max-height: 15em;
     counter-increment: gallery-cell;
     display: flex;
     justify-content: center;
+    align-items: center;
     overflow: hidden;
 }
 
 .flickity-page-dots{
-    visibility: hidden;
+    display: none;
+    visibility: collapse;
 }
 
-/* cell number */
 .gallery-cell > img{
-    height: 100%;
+    width: 100%;
 }
 
 .mapas {
