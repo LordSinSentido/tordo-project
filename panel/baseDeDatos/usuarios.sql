@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 04-12-2020 a las 15:57:44
+-- Tiempo de generación: 08-12-2020 a las 05:30:55
 -- Versión del servidor: 10.4.14-MariaDB
 -- Versión de PHP: 7.4.11
 
@@ -33,16 +33,16 @@ CREATE TABLE `usuarios` (
   `apellido` text NOT NULL,
   `contrasenna` text NOT NULL,
   `rol` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `usuarios`
 --
 
 INSERT INTO `usuarios` (`correo`, `nombre`, `apellido`, `contrasenna`, `rol`) VALUES
-('hola@tordotec.com', 'Admin', 'istrador', 'Admin147852', 0),
-('miguel.sosa@tordotec.com', 'Miguel', 'Sosa', '@147852', 1),
-('adriana.castillo@tordotec.com', 'Adriana', 'Castillo', '@123456', 2),
+('hola@tordotec.com', 'Administrador', '', 'Admin147852', 0),
+('miguel.sosa@tordotec.com', 'Miguel', 'Sosa', '@147852', 2),
+('adriana.castillo@tordotec.com', 'Adriana', 'Castillo', '@123456', 1),
 ('owen.enriquez@tordotec.com', 'Owen', 'Enríquez', '@789456', 3);
 
 --
